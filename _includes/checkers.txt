@@ -1,0 +1,184 @@
+### Class org.scalastyle.file.FileLengthChecker - Check the number of lines in a file
+
+ * id - file.size.limit
+ * default level - WarningLevel
+
+Parameters
+<table width="50%"><tr><th>Parameter</th><th>Description</th><th>Type</th><th>Default Value</th></tr><tr><td>maxFileLength</td>
+								<td>Maximum file length</td>
+								<td>integer</td>
+								<td>1500</td>
+								</tr></table>
+
+### Class org.scalastyle.file.FileLineLengthChecker - Check the number of characters in a line
+
+ * id - line.size.limit
+ * default level - WarningLevel
+
+Parameters
+<table width="50%"><tr><th>Parameter</th><th>Description</th><th>Type</th><th>Default Value</th></tr><tr><td>maxLineLength</td>
+								<td>Maximum line length</td>
+								<td>integer</td>
+								<td>160</td>
+								</tr><tr><td>tabSize</td>
+								<td>Tab size</td>
+								<td>integer</td>
+								<td>4</td>
+								</tr></table>
+
+### Class org.scalastyle.file.FileTabChecker - Check that there are no tabs in a file
+
+ * id - line.contains.tab
+ * default level - WarningLevel
+
+No parameters
+
+### Class org.scalastyle.file.HeaderMatchesChecker - Check the first lines of each file matches the text
+
+ * id - header.matches
+ * default level - WarningLevel
+
+Parameters
+<table width="50%"><tr><th>Parameter</th><th>Description</th><th>Type</th><th>Default Value</th></tr><tr><td>header</td>
+								<td>Header</td>
+								<td>string</td>
+								<td></td>
+								</tr></table>
+
+### Class org.scalastyle.file.WhitespaceEndOfLineChecker - Check that there is no trailing whitespace at the end of lines
+
+ * id - whitespace.end.of.line
+ * default level - WarningLevel
+
+No parameters
+
+### Class org.scalastyle.scalariform.ClassNamesChecker - Check that class names match a regular expression
+
+ * id - class.name
+ * default level - WarningLevel
+
+Parameters
+<table width="50%"><tr><th>Parameter</th><th>Description</th><th>Type</th><th>Default Value</th></tr><tr><td>regex</td>
+								<td>Regular expression</td>
+								<td>string</td>
+								<td>[A-Z][A-Za-z]*</td>
+								</tr></table>
+
+### Class org.scalastyle.scalariform.CovariantEqualsChecker - Check that classes and objects do not define equals without overriding equals(java.lang.Object).
+
+ * id - covariant.equals
+ * default level - WarningLevel
+
+No parameters
+
+### Class org.scalastyle.scalariform.EqualsHashCodeChecker - Check that if a class implements either equals or hashCode, it should implement the other
+
+ * id - equals.hash.code
+ * default level - WarningLevel
+
+No parameters
+
+### Class org.scalastyle.scalariform.IllegalImportsChecker - Check that a class does not import certain classes
+
+ * id - illegal.imports
+ * default level - WarningLevel
+
+Parameters
+<table width="50%"><tr><th>Parameter</th><th>Description</th><th>Type</th><th>Default Value</th></tr><tr><td>illegalImports</td>
+								<td>Illegal Imports</td>
+								<td>string</td>
+								<td>sun._,java.awt._</td>
+								</tr></table>
+
+### Class org.scalastyle.scalariform.MagicNumberChecker - Checks for use of magic numbers
+
+ * id - magic.number
+ * default level - WarningLevel
+
+Parameters
+<table width="50%"><tr><th>Parameter</th><th>Description</th><th>Type</th><th>Default Value</th></tr><tr><td>ignore</td>
+								<td>Ignore</td>
+								<td>string</td>
+								<td>-1,0,1,2</td>
+								</tr></table>
+
+### Class org.scalastyle.scalariform.NoCloneChecker - Check that classes and objects do not define the clone() method
+
+ * id - no.clone
+ * default level - WarningLevel
+
+No parameters
+
+### Class org.scalastyle.scalariform.NoFinalizeChecker - Check that classes and objects do not define the finalize() method
+
+ * id - no.finalize
+ * default level - WarningLevel
+
+No parameters
+
+### Class org.scalastyle.scalariform.NoWhitespaceAfterLeftBracketChecker - No whitespace after left bracket ''(''
+
+ * id - no.whitespace.after.left.bracket
+ * default level - WarningLevel
+
+No parameters
+
+### Class org.scalastyle.scalariform.NoWhitespaceBeforeLeftBracketChecker - No whitespace before left bracket ''(''
+
+ * id - no.whitespace.before.left.bracket
+ * default level - WarningLevel
+
+No parameters
+
+### Class org.scalastyle.scalariform.NullChecker - Check that null is not used
+
+ * id - null
+ * default level - WarningLevel
+
+No parameters
+
+### Class org.scalastyle.scalariform.ObjectNamesChecker - Check that object names match a regular expression
+
+ * id - object.name
+ * default level - WarningLevel
+
+Parameters
+<table width="50%"><tr><th>Parameter</th><th>Description</th><th>Type</th><th>Default Value</th></tr><tr><td>regex</td>
+								<td>Regular expression</td>
+								<td>string</td>
+								<td>[A-Z][A-Za-z]*</td>
+								</tr></table>
+
+### Class org.scalastyle.scalariform.ParameterNumberChecker - Maximum number of parameters for a method
+
+ * id - parameter.number
+ * default level - WarningLevel
+
+Parameters
+<table width="50%"><tr><th>Parameter</th><th>Description</th><th>Type</th><th>Default Value</th></tr><tr><td>maxParameters</td>
+								<td>Maximum Number</td>
+								<td>integer</td>
+								<td>8</td>
+								</tr></table>
+
+### Class org.scalastyle.scalariform.ReturnChecker - Check that return is not used
+
+ * id - return
+ * default level - WarningLevel
+
+No parameters
+
+### Class org.scalastyle.scalariform.SpacesAfterPlusChecker - Check that the plus sign is followed by a space
+
+ * id - spaces.after.plus
+ * default level - WarningLevel
+
+No parameters
+
+### Class org.scalastyle.scalariform.SpacesBeforePlusChecker - Check that the plus sign is preceded by a space
+
+ * id - spaces.before.plus
+ * default level - WarningLevel
+
+No parameters
+
