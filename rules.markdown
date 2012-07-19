@@ -247,20 +247,20 @@ No parameters
 #### Parameters
 No parameters
 
-### org.scalastyle.scalariform.NoWhitespaceAfterLeftBracketChecker - No whitespace after left bracket ''[''
+### org.scalastyle.scalariform.NoWhitespaceAfterLeftBracketChecker - No whitespace after left bracket '\['
 
  * id - no.whitespace.after.left.bracket
- * description - No whitespace after left bracket ''[''
+ * description - No whitespace after left bracket '\['
  * class - org.scalastyle.scalariform.NoWhitespaceAfterLeftBracketChecker
  * default level - WarningLevel
 
 #### Parameters
 No parameters
 
-### org.scalastyle.scalariform.NoWhitespaceBeforeLeftBracketChecker - No whitespace before left bracket ''[''
+### org.scalastyle.scalariform.NoWhitespaceBeforeLeftBracketChecker - No whitespace before left bracket '\['
 
  * id - no.whitespace.before.left.bracket
- * description - No whitespace before left bracket ''[''
+ * description - No whitespace before left bracket '\['
  * class - org.scalastyle.scalariform.NoWhitespaceBeforeLeftBracketChecker
  * default level - WarningLevel
 

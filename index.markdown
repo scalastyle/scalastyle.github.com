@@ -6,12 +6,6 @@ title: "Scalastyle - Scala style checker"
 Scalastyle examines your Scala code and indicates potential problems with it. If you have come across Checkstyle for Java,
 then you'll have a good idea what scalastyle is. Except that it's for Scala obviously.
 
-### Rules
-
-For a list of actual rules, see [Implemented Rules](rules.html).
-For a list of (planned) rules, see the [Scalastyle WIKI](https://github.com/scalastyle/scalastyle/wiki).
-If you want to add a rule, then please raise an [Issue](https://github.com/scalastyle/scalastyle/issues) (or even better a pull request)
-
 ### How do I use scalastyle?
 
 There are several ways of using it:
@@ -20,6 +14,14 @@ There are several ways of using it:
  * [Eclipse plugin (for 3.6 Helios)](https://github.com/scalastyle/scalastyle-plugin): <br/>Master development branch update site (cut and paste into Eclipse) <a href="http://www.scalastyle.org/downloads/helios/master/site">http://www.scalastyle.org/downloads/helios/master/site</a>
  * [Command line](https://github.com/scalastyle/scalastyle-batch)
 
+### Rules
+
+For a list of actual rules, see [Implemented Rules](rules.html).
+For a list of (planned) rules, see the [Scalastyle WIKI](https://github.com/scalastyle/scalastyle/wiki).
+If you want to add a rule, then please raise an [Issue](https://github.com/scalastyle/scalastyle/issues) (or even better a pull request)
+
+### Questions and comments
+If you have any questions, please see [Scalastyle users Google groups](https://groups.google.com/forum/#!forum/scalastyle-users)
 
 ### Running scalastyle from the command line
 
