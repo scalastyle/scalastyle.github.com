@@ -14,6 +14,15 @@ There are several ways of using it:
  * [Eclipse plugin (for 3.6 Helios)](https://github.com/scalastyle/scalastyle-plugin): <br/>Master development branch update site (cut and paste into Eclipse) <a href="http://www.scalastyle.org/downloads/helios/master/site">http://www.scalastyle.org/downloads/helios/master/site</a>
  * [Command line](https://github.com/scalastyle/scalastyle-batch)
 
+#### Download
+
+To download Scalastyle, the jar is available from [Sonatype](https://oss.sonatype.org/content/repositories/snapshots/org/scalastyle/scalastyle_2.9.1/0.1.0-SNAPSHOT/). These are the latest development snapshots.
+<br/>
+To scalastyle-batch (command line), this is also available from [Sonatype](https://oss.sonatype.org/content/repositories/snapshots/org/scalastyle/scalastyle-batch_2.9.1/0.1.0-SNAPSHOT/). The latest version
+of scalastyle-batch always contains the latest version of Scalastyle.
+<br/>
+For the maven plugin, see [Scalastyle Maven Plugin](maven.html)
+
 ### Rules
 
 For a list of actual rules, see [Implemented Rules](rules.html).
