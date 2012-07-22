@@ -1,6 +1,6 @@
 ---
 layout: scalastyle
-title: "Scalastyle - Eclipse - Getting started"
+title: "Scalastyle - Developer guide"
 ---
 
 ### Pre-requisites
