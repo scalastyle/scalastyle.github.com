@@ -10,8 +10,8 @@ then you'll have a good idea what scalastyle is. Except that it's for Scala obvi
 
 There are several ways of using it:
 
- * [Maven plugin](https://github.com/scalastyle/scalastyle-maven-plugin)
- * [Eclipse plugin (for 3.6 Helios)](https://github.com/scalastyle/scalastyle-plugin): <br/>Master development branch update site (cut and paste into Eclipse) <a href="http://www.scalastyle.org/downloads/helios/master/site">http://www.scalastyle.org/downloads/helios/master/site</a>
+ * [Maven Plugin](maven.html)
+ * [Eclipse plugin (for 3.6 Helios)](eclipse-index.html)
  * [Command line](https://github.com/scalastyle/scalastyle-batch)
 
 #### Download
@@ -22,6 +22,8 @@ To scalastyle-batch (command line), this is also available from [Sonatype](https
 of scalastyle-batch always contains the latest version of Scalastyle.
 <br/>
 For the maven plugin, see [Scalastyle Maven Plugin](maven.html)
+<br/>
+[Eclipse plugin (for 3.6 Helios)](eclipse-index.html): <br/>Master development branch update site (cut and paste into Eclipse) <a href="http://www.scalastyle.org/downloads/helios/master/site">http://www.scalastyle.org/downloads/helios/master/site</a>
 
 ### Rules
 
@@ -31,6 +33,12 @@ If you want to add a rule, then please raise an [Issue](https://github.com/scala
 
 ### Questions and comments
 If you have any questions, please see [Scalastyle users Google groups](https://groups.google.com/forum/#!forum/scalastyle-users)
+
+### Github repositories
+
+ * [Maven plugin](https://github.com/scalastyle/scalastyle-maven-plugin)
+ * [Eclipse plugin](https://github.com/scalastyle/scalastyle-plugin)
+ * [Command line](https://github.com/scalastyle/scalastyle-batch)
 
 ### Running scalastyle from the command line
 
