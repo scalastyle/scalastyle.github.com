@@ -92,7 +92,7 @@ To run the tests:
 
 Want to contribute? Great! Look at the wiki for potential rules to implement, or do one of your own, and implement it.
 
-1. Read the [developer guide](https://github.com/scalastyle/scalastyle/wiki/developer-guide)
+1. Read the [developer guide](developer-guide.html)
 2. Fork the repo.
 3. Create a branch (`git checkout -b my_new_rule`)
 4. Commit your changes (`git commit -am "Added NoFooAllowed"`)
