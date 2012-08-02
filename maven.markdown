@@ -16,7 +16,7 @@ To Configure the Scalastyle Plugin, you need to the add it in the &lt;build&gt; 
 and by default the build will fail if there are any violations of level error found.
 Default phase of execution is `verify`. The following is an example of a configuration which would be used in a pom:
 
-<code><pre>
+<pre>
     &lt;build&gt;
         &lt;plugins&gt; 
           ...
@@ -44,4 +44,4 @@ Default phase of execution is `verify`. The following is an example of a configu
             ...
         &lt;/plugins&gt;
     &lt;/build&gt;
-</pre></code>
+</pre>
