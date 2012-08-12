@@ -3,7 +3,7 @@ layout: scalastyle
 title: "Scalastyle: Implemented Rules"
 ---
 
-There are 34 rules which are currently implemented:
+There are 37 rules which are currently implemented:
 
 ### org.scalastyle.file.FileLengthChecker - Check the number of lines in a file
 
@@ -570,3 +570,48 @@ No parameters
 
 ### Example configuration
 <pre>&lt;check enabled=&quot;true&quot; class=&quot;org.scalastyle.scalariform.UppercaseLChecker&quot; level=&quot;warning&quot;&gt;&lt;/check&gt;</pre>
+### org.scalastyle.scalariform.VarFieldChecker - Checks that classes and objects do not define mutable fields
+
+ * id - var.field
+ * description - Checks that classes and objects do not define mutable fields
+ * class - org.scalastyle.scalariform.VarFieldChecker
+ * default level - WarningLevel
+
+#### Justification
+var (mutable fields) are deprecated if you're using a strict functional style
+
+#### Parameters
+No parameters
+
+### Example configuration
+<pre>&lt;check enabled=&quot;true&quot; class=&quot;org.scalastyle.scalariform.VarFieldChecker&quot; level=&quot;warning&quot;&gt;&lt;/check&gt;</pre>
+### org.scalastyle.scalariform.VarLocalChecker - Checks that functions do not define mutable variables
+
+ * id - var.local
+ * description - Checks that functions do not define mutable variables
+ * class - org.scalastyle.scalariform.VarLocalChecker
+ * default level - WarningLevel
+
+#### Justification
+vars (mutable local variables) loops are deprecated if you're using a strict functional style
+
+#### Parameters
+No parameters
+
+### Example configuration
+<pre>&lt;check enabled=&quot;true&quot; class=&quot;org.scalastyle.scalariform.VarLocalChecker&quot; level=&quot;warning&quot;&gt;&lt;/check&gt;</pre>
+### org.scalastyle.scalariform.WhileChecker - Checks that while is not used
+
+ * id - while
+ * description - Checks that while is not used
+ * class - org.scalastyle.scalariform.WhileChecker
+ * default level - WarningLevel
+
+#### Justification
+while loops are deprecated if you're using a strict functional style
+
+#### Parameters
+No parameters
+
+### Example configuration
+<pre>&lt;check enabled=&quot;true&quot; class=&quot;org.scalastyle.scalariform.WhileChecker&quot; level=&quot;warning&quot;&gt;&lt;/check&gt;</pre>
