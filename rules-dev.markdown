@@ -3,7 +3,7 @@ layout: scalastyle
 title: "Scalastyle: Implemented Rules"
 ---
 
-There are 37 rules which are currently implemented:
+There are 40 rules which are currently implemented:
 
 ### org.scalastyle.file.FileLengthChecker - Check the number of lines in a file
 
@@ -190,6 +190,21 @@ If there are too many classes/objects defined in a single file, this can cause t
   &lt;parameter name=&quot;maximum&quot;&gt;10&lt;/parameter&gt;
  &lt;/parameters&gt;
 &lt;/check&gt;</pre>
+### org.scalastyle.scalariform.DeprecatedJavaChecker - Checks that Java @Deprecated is not used, Scala @deprecated should be used instead
+
+ * id - deprecated.java
+ * description - Checks that Java @Deprecated is not used, Scala @deprecated should be used instead
+ * class - org.scalastyle.scalariform.DeprecatedJavaChecker
+ * default level - WarningLevel
+
+#### Justification
+You should be using the Scala @deprecated instead.
+
+#### Parameters
+No parameters
+
+### Example configuration
+<pre>&lt;check enabled=&quot;true&quot; class=&quot;org.scalastyle.scalariform.DeprecatedJavaChecker&quot; level=&quot;warning&quot;&gt;&lt;/check&gt;</pre>
 ### org.scalastyle.scalariform.EqualsHashCodeChecker - Check that if a class implements either equals or hashCode, it should implement the other
 
  * id - equals.hash.code
@@ -495,6 +510,21 @@ No parameters
 
 ### Example configuration
 <pre>&lt;check enabled=&quot;true&quot; class=&quot;org.scalastyle.scalariform.PublicMethodsHaveTypeChecker&quot; level=&quot;warning&quot;&gt;&lt;/check&gt;</pre>
+### org.scalastyle.scalariform.RedundantIfChecker - Checks that if expressions are not redundant, i.e. easily replaced by a variant of the condition
+
+ * id - if.redundant
+ * description - Checks that if expressions are not redundant, i.e. easily replaced by a variant of the condition
+ * class - org.scalastyle.scalariform.RedundantIfChecker
+ * default level - WarningLevel
+
+#### Justification
+If expressions with boolean constants in both branches can be eliminated without affecting readability. Prefer simply `cond` to `if (cond) true else false` and `!cond` to `if (cond) false else true`.
+
+#### Parameters
+No parameters
+
+### Example configuration
+<pre>&lt;check enabled=&quot;true&quot; class=&quot;org.scalastyle.scalariform.RedundantIfChecker&quot; level=&quot;warning&quot;&gt;&lt;/check&gt;</pre>
 ### org.scalastyle.scalariform.ReturnChecker - Check that return is not used
 
  * id - return
@@ -555,6 +585,27 @@ No parameters
 
 ### Example configuration
 <pre>TBD</pre>
+### org.scalastyle.scalariform.TokenChecker - Checks that a regular expression cannot be matched in a token, if found reports this
+
+ * id - token
+ * description - Checks that a regular expression cannot be matched in a token, if found reports this
+ * class - org.scalastyle.scalariform.TokenChecker
+ * default level - WarningLevel
+
+#### Parameters
+<table width="80%"><tr><th>Parameter</th><th>Description</th><th>Type</th><th>Default Value</th></tr><tr><td>regex</td>
+								<td>Regular expression</td>
+								<td>string</td>
+								<td>^$</td>
+								</tr></table>
+
+### Example configuration
+<pre>&lt;check enabled=&quot;true&quot; class=&quot;org.scalastyle.scalariform.TokenChecker&quot; level=&quot;warning&quot;&gt;
+ &lt;parameters&gt;
+  &lt;parameter name=&quot;regex&quot;&gt;^[ai]sInstanceOf$&lt;/parameter&gt;
+ &lt;/parameters&gt;
+ &lt;customMessage&gt;Avoid casting.&lt;/customMessage&gt;
+&lt;/check&gt;</pre>
 ### org.scalastyle.scalariform.UppercaseLChecker - Checks that if a long literal is used, then an uppercase L is used
 
  * id - uppercase.l
