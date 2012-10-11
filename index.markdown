@@ -14,6 +14,7 @@ There are several ways of using it:
 
  * [Maven Plugin](maven.html)
  * [Eclipse plugin (for 3.6 Helios)](eclipse-index.html)
+ * [SBT plugin](https://github.com/scalastyle/scalastyle-sbt-plugin) Warning: This is currently still a SNAPSHOT, and has not yet been officially released.
  * [Command line](https://github.com/scalastyle/scalastyle-batch)
 
 #### Download
