@@ -3,7 +3,7 @@ layout: scalastyle
 title: "Scalastyle: Implemented Rules"
 ---
 
-There are 40 rules which are currently implemented:
+There are 41 rules which are currently implemented:
 
 ### org.scalastyle.file.FileLengthChecker - Check the number of lines in a file
 
@@ -205,6 +205,21 @@ No parameters
 
 ### Example configuration
 <pre>&lt;check enabled=&quot;true&quot; class=&quot;org.scalastyle.scalariform.DeprecatedJavaChecker&quot; level=&quot;warning&quot;&gt;&lt;/check&gt;</pre>
+### org.scalastyle.scalariform.EmptyClassChecker - If a class/trait has no members, the braces are unnecessary
+
+ * id - empty.class
+ * description - If a class/trait has no members, the braces are unnecessary
+ * class - org.scalastyle.scalariform.EmptyClassChecker
+ * default level - WarningLevel
+
+#### Justification
+If a class / trait has no members, then braces are unnecessary, and can be removed.
+
+#### Parameters
+No parameters
+
+### Example configuration
+<pre>&lt;check enabled=&quot;true&quot; class=&quot;org.scalastyle.scalariform.EmptyClassChecker&quot; level=&quot;warning&quot;&gt;&lt;/check&gt;</pre>
 ### org.scalastyle.scalariform.EqualsHashCodeChecker - Check that if a class implements either equals or hashCode, it should implement the other
 
  * id - equals.hash.code
