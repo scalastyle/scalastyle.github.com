@@ -3,7 +3,7 @@ layout: scalastyle
 title: "Scalastyle: Implemented Rules"
 ---
 
-There are 41 rules which are currently implemented:
+There are 42 rules which are currently implemented:
 
 ### org.scalastyle.file.FileLengthChecker - Check the number of lines in a file
 
@@ -155,6 +155,31 @@ No parameters
 
 ### Example configuration
 <pre>TBD</pre>
+### org.scalastyle.scalariform.ClassTypeParameterChecker - Checks that type parameter to a class matches a regular expression
+
+ * id - class.type.parameter.name
+ * description - Checks that type parameter to a class matches a regular expression
+ * class - org.scalastyle.scalariform.ClassTypeParameterChecker
+ * default level - WarningLevel
+
+#### Justification
+Scala generic type names are generally single upper case letters. This check checks for classes and traits.
+ 
+ Note that this check only checks the innermost type parameter, to allow for List[T].
+
+#### Parameters
+<table width="80%"><tr><th>Parameter</th><th>Description</th><th>Type</th><th>Default Value</th></tr><tr><td>regex</td>
+								<td>Regular expression</td>
+								<td>string</td>
+								<td>^[A-Z_]$</td>
+								</tr></table>
+
+### Example configuration
+<pre>&lt;check enabled=&quot;true&quot; class=&quot;org.scalastyle.scalariform.ClassTypeParameterChecker&quot; level=&quot;warning&quot;&gt;
+ &lt;parameters&gt;
+  &lt;parameter name=&quot;regex&quot;&gt;^[A-Z_]$&lt;/parameter&gt;
+ &lt;/parameters&gt;
+&lt;/check&gt;</pre>
 ### org.scalastyle.scalariform.CovariantEqualsChecker - Check that classes and objects do not define equals without overriding equals(java.lang.Object).
 
  * id - covariant.equals
