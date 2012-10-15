@@ -165,7 +165,7 @@ No parameters
 #### Justification
 Scala generic type names are generally single upper case letters. This check checks for classes and traits.
  
- Note that this check only checks the innermost type parameter, to allow for List[T].
+ Note that this check only checks the innermost type parameter, to allow for List\[T\].
 
 #### Parameters
 <table width="80%"><tr><th>Parameter</th><th>Description</th><th>Type</th><th>Default Value</th></tr><tr><td>regex</td>
