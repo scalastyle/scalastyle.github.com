@@ -3,7 +3,7 @@ layout: scalastyle
 title: "Scalastyle: Implemented Rules"
 ---
 
-There are 42 rules which are currently implemented:
+There are 43 rules which are currently implemented:
 
 ### org.scalastyle.file.FileLengthChecker - Check the number of lines in a file
 
@@ -646,6 +646,21 @@ No parameters
  &lt;/parameters&gt;
  &lt;customMessage&gt;Avoid casting.&lt;/customMessage&gt;
 &lt;/check&gt;</pre>
+### org.scalastyle.scalariform.UnderscoreImportChecker - Avoid wildcard imports
+
+ * id - underscore.import
+ * description - Avoid wildcard imports
+ * class - org.scalastyle.scalariform.UnderscoreImportChecker
+ * default level - WarningLevel
+
+#### Justification
+Importing all classes from a package or static members from a class leads to tight coupling between packages or classes and might lead to problems when a new version of a library introduces name clashes.
+
+#### Parameters
+No parameters
+
+### Example configuration
+<pre>&lt;check enabled=&quot;true&quot; class=&quot;org.scalastyle.scalariform.UnderscoreImportChecker&quot; level=&quot;warning&quot;&gt;&lt;/check&gt;</pre>
 ### org.scalastyle.scalariform.UppercaseLChecker - Checks that if a long literal is used, then an uppercase L is used
 
  * id - uppercase.l
