@@ -3,7 +3,7 @@ layout: scalastyle
 title: "Scalastyle: Implemented Rules"
 ---
 
-There are 43 rules which are currently implemented:
+There are 44 rules which are currently implemented:
 
 ### org.scalastyle.file.FileLengthChecker - Check the number of lines in a file
 
@@ -301,6 +301,35 @@ A lowercase L (l) can look similar to a number 1 with some fonts.
 
 ### Example configuration
 <pre>TBD</pre>
+### org.scalastyle.scalariform.LowercasePatternMatchChecker - Checks that a case statement pattern match is not lower case, as this can cause confusion
+
+ * id - lowercase.pattern.match
+ * description - Checks that a case statement pattern match is not lower case, as this can cause confusion
+ * class - org.scalastyle.scalariform.LowercasePatternMatchChecker
+ * default level - WarningLevel
+
+#### Justification
+A lower case pattern match clause with no other tokens is the same as \_; this is not true for patterns which start with an upper
+  case letter. This can cause confusion, and may not be what was intended: 
+  
+    val foo = "foo"
+    val Bar = "bar"
+    "bar" match { case Bar => "we got bar" }   // result = "we got bar"
+    "bar" match { case foo => "we got foo" }   // result = "we got foo"
+    "bar" match { case `foo` => "we got foo" } // result = MatchError
+    
+  This checker raises a warning with the second match. To fix it, use an identifier which starts with an upper case letter (best), use case \_ or,
+  if you wish to refer to the value, add a type `: Any`
+  
+    val lc = "lc"
+    "something" match { case lc: Any => "lc" } // result = "lc"
+    "something" match { case _ => "lc" } // result = "lc"
+
+#### Parameters
+No parameters
+
+### Example configuration
+<pre>&lt;check enabled=&quot;true&quot; class=&quot;org.scalastyle.scalariform.LowercasePatternMatchChecker&quot; level=&quot;warning&quot;&gt;&lt;/check&gt;</pre>
 ### org.scalastyle.scalariform.MagicNumberChecker - Checks for use of magic numbers
 
  * id - magic.number
