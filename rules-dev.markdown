@@ -3,7 +3,7 @@ layout: scalastyle
 title: "Scalastyle: Implemented Rules"
 ---
 
-There are 44 rules which are currently implemented:
+There are 45 rules which are currently implemented:
 
 ### org.scalastyle.file.FileLengthChecker - Check the number of lines in a file
 
@@ -408,6 +408,29 @@ The Scala style guide recommends that method names conform to certain standards.
 <pre>&lt;check enabled=&quot;true&quot; class=&quot;org.scalastyle.scalariform.MethodNamesChecker&quot; level=&quot;warning&quot;&gt;
  &lt;parameters&gt;
   &lt;parameter name=&quot;regex&quot;&gt;^[A-Za-z]*$&lt;/parameter&gt;
+ &lt;/parameters&gt;
+&lt;/check&gt;</pre>
+### org.scalastyle.scalariform.MultipleStringLiteralsChecker - Checks that a string literal does not appear multiple times
+
+ * id - multiple.string.literals
+ * description - Checks that a string literal does not appear multiple times
+ * class - org.scalastyle.scalariform.MultipleStringLiteralsChecker
+ * default level - WarningLevel
+
+#### Justification
+Code duplication makes maintenance more difficult, so it can be better to replace the multiple occurrences with a constant.
+
+#### Parameters
+<table width="80%"><tr><th>Parameter</th><th>Description</th><th>Type</th><th>Default Value</th></tr><tr><td>allowed</td>
+								<td>Maximum occurences allowed</td>
+								<td>integer</td>
+								<td>1</td>
+								</tr></table>
+
+### Example configuration
+<pre>&lt;check enabled=&quot;true&quot; class=&quot;org.scalastyle.scalariform.MultipleStringLiteralsChecker&quot; level=&quot;warning&quot;&gt;
+ &lt;parameters&gt;
+  &lt;parameter name=&quot;allowed&quot;&gt;1&lt;/parameter&gt;
  &lt;/parameters&gt;
 &lt;/check&gt;</pre>
 ### org.scalastyle.scalariform.NoCloneChecker - Check that classes and objects do not define the clone() method
