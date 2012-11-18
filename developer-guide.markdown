@@ -19,7 +19,7 @@ To clone the git repo, and check out the master branch:
     $ git clone git@github.com:<yourgithubnamehere>/scalastyle.git
     $ cd scalastyle
 
-Scalastyle uses [Maven 2](http://maven.apache.org/) to build. To create the distribution, run
+Scalastyle uses [Maven 3](http://maven.apache.org/) to build. To create the distribution, run
 
     $ mvn package
 

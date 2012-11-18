@@ -11,7 +11,7 @@ It counts the number of violations found and displays it on the console if verbo
 
 The repository for the Scalastyle maven plugin is: [Sonatype : https://oss.sonatype.org/content/repositories/releases/org/scalastyle/scalastyle-maven-plugin](https://oss.sonatype.org/content/repositories/releases/org/scalastyle/scalastyle-maven-plugin)
 
-### Usage - scalacheck violation part of build cycle
+### Usage - scalastyle as part of build cycle
 To Configure the Scalastyle Plugin, you need to the add it in the &lt;build&gt; section of your pom.xml as shown in the sample below,
 and by default the build will fail if there are any violations of level error found.
 Default phase of execution is `verify`. The following is an example of a configuration which would be used in a pom:
@@ -23,7 +23,7 @@ Default phase of execution is `verify`. The following is an example of a configu
           &lt;plugin&gt;
             &lt;groupId&gt;org.scalastyle&lt;/groupId&gt;
             &lt;artifactId&gt;scalastyle-maven-plugin&lt;/artifactId&gt;
-            &lt;version&gt;0.1.0&lt;/version&gt;
+            &lt;version&gt;0.2.0&lt;/version&gt;
             &lt;configuration&gt;
               &lt;verbose&gt;false&lt;/verbose&gt;
               &lt;failOnViolation&gt;true&lt;/failOnViolation&gt;
