@@ -21,13 +21,11 @@ There are several ways of using it:
 
 To download Scalastyle, the jar is available from [Sonatype](https://oss.sonatype.org/content/repositories/releases/org/scalastyle/scalastyle_2.9.2).
 <br/>
-To scalastyle-batch (command line), this is also available from [Sonatype](https://oss.sonatype.org/content/repositories/releases/org/scalastyle/scalastyle-batch_2.9.2/). The latest version
-of scalastyle-batch always contains the latest version of Scalastyle.
-<br/>
 For the maven plugin, see [Scalastyle Maven Plugin](maven.html)
 <br/>
-[Eclipse plugin (for 3.6 Helios)](eclipse-index.html): <br/>Stable update site (cut and paste into Eclipse)
-<a href="http://www.scalastyle.org/downloads/helios/2.9.2-0.2.0/site">http://www.scalastyle.org/downloads/helios/2.9.2-0.2.0/site</a>
+For the SBT plugin, see [Scalastyle SBT Plugin](sbt.html)
+<br/>
+Eclipse plugin (for 3.6 Helios): Update site [http://www.scalastyle.org/downloads/helios/2.9.2-0.2.0/site](http://www.scalastyle.org/downloads/helios/2.9.2-0.2.0/site)
 
 The latest development snapshots are available from [Sonatype snapshots](https://oss.sonatype.org/content/repositories/snapshots/org/scalastyle/)
 
@@ -42,7 +40,8 @@ For a list of rules in the latest development version, see [Development Implemen
 For the version 0.1.0 rules, see [0.1.0 Implemented Rules](rules-0.1.0.html).
 
 ### Questions and comments
-If you have any questions, please see [Scalastyle users Google groups](https://groups.google.com/forum/#!forum/scalastyle-users)
+
+If you have any questions or comments, please see [Scalastyle users Google groups](https://groups.google.com/forum/#!forum/scalastyle-users)
 
 ### Github repositories
 

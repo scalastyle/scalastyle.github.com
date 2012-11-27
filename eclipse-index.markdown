@@ -7,7 +7,7 @@ title: "Scalastyle - Eclipse plugin"
 
 The Scalastyle plugin for Eclipse integrates the source code analyzer Scalastyle with Eclipse.
 <br/>
-[Scalastyle](https://github.com/scalastyle/scalastyle) is a development tool
+[Scalastyle](http://www.scalastyle.org) is a development tool
 written by Matthew Farwell to help you ensure that your Scala code adheres to a set of coding
 standards. Scalastyle does this by inspecting your Scala source code and pointing out
 items that deviate from a defined set of coding rules. The full Scalastyle distribution
