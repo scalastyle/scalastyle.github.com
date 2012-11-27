@@ -13,7 +13,7 @@ The repository for the Scalastyle SBT plugin is: [Sonatype : https://oss.sonatyp
 
 ### Setup
 
-add following line to `project/plugins.sbt`
+Add the following lines to `project/plugins.sbt`
 
     addSbtPlugin("org.scalastyle" %% "scalastyle-sbt-plugin" % "0.2.0")
 
@@ -29,4 +29,4 @@ You can check your code by typing `sbt scalastyle`.
 The result file is `target/scalastyle-result.xml` (CheckStyle compatible format).
 
 Scalastyle Configuration file is `./scalastyle-config.xml` by default.
-To generate default configuration file, by typing `sbt scalastyle-generate-config`.
+To generate a configuration file, type `sbt scalastyle-generate-config`.

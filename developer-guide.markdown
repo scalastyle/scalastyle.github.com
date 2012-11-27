@@ -3,6 +3,18 @@ layout: scalastyle
 title: "Scalastyle - Developer guide"
 ---
 
+### Contributing
+
+Want to contribute? Great! Look at the wiki for potential rules to implement, or do one of your own, and implement it.
+
+1. Read this document.
+2. Fork the repo.
+3. Create a branch (`git checkout -b my_new_rule`)
+4. Commit your changes (`git commit -am "Added NoFooAllowed"`)
+5. Push to the branch (`git push origin my_new_rule`)
+6. Create an [Issue](https://github.com/scalastyle/scalastyle/issues) with a link to your branch
+7. Enjoy a coffee and wait
+
 ### Pre-requisites
 
 * [git](http://gitscm.com/)
@@ -37,6 +49,12 @@ When you're developing, it's pretty much always a good idea to create a local br
 	
 Then, when you've finished, go onto github, and create a pull request so that the code can be reviewed and pulled into the scalastyle repo.
 
+### Testing
+
+To run the tests:
+
+    $ mvn test
+
 ### Submitting pull requests
 
 Pull requests are always welcome. To create a pull request, go to your repo, and click on `Pull Request`. Enter the commit details, and submit it. This will create
@@ -49,3 +67,25 @@ an issue in github for scalastyle, which will notify the maintainers. The follow
 ### What to work on
 
 Please see the set of [issues](https://github.com/scalastyle/scalastyle/issues) or the [Scalastyle WIKI](https://github.com/scalastyle/scalastyle/wiki) for a list of potential rules.
+
+### Maven repo
+
+Snapshots are available from the Sonatype nexus repository: https://oss.sonatype.org/content/repositories/snapshots/.
+To use, add something like the following to your settings.xml:
+
+    <repository>
+      <id>sonatype-nexus-snapshots</id>
+      <name>Sonatype OSS</name>
+      <url>https://oss.sonatype.org/content/repositories/releases/</url>
+      <layout>default</layout>
+      <releases>
+        <enabled>true</enabled>
+        <updatePolicy>never</updatePolicy>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+        <updatePolicy>never</updatePolicy>
+      </snapshots>
+    </repository>
+
+
