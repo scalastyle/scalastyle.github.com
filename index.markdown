@@ -6,6 +6,8 @@ title: "Scalastyle - Scala style checker"
 Scalastyle examines your Scala code and indicates potential problems with it. If you have come across Checkstyle for Java,
 then you'll have a good idea what scalastyle is. Except that it's for Scala obviously.
 
+Scalastyle was recently used as part of the grading framework for the course [Functional Programming Principles in Scala by Martin Odersky](https://www.coursera.org/course/progfun) on Coursera.
+
 ### How do I use scalastyle?
 
 The latest stable version of Scalastyle is 0.2.0 for Scala 2.9.2. See the [Release Notes](release-notes.html)
