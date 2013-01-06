@@ -15,7 +15,7 @@ The latest stable version of Scalastyle is 0.2.0 for Scala 2.9.2. See the [Relea
 There are several ways of using it:
 
  * [Maven Plugin](maven.html)
- * [Eclipse plugin (for 3.6 Helios)](eclipse-index.html)
+ * [Eclipse plugin (for 3.6 Helios & 3.7 Indigo)](eclipse-index.html)
  * [SBT plugin](sbt.html)
  * [Command line](command-line.html)
 
@@ -26,6 +26,8 @@ To download Scalastyle, the jar is available from [Sonatype](https://oss.sonatyp
 For the maven plugin, see [Scalastyle Maven Plugin](maven.html)
 <br/>
 For the SBT plugin, see [Scalastyle SBT Plugin](sbt.html)
+<br/>
+Eclipse plugin (for 3.7 Indigo): Update site [http://www.scalastyle.org/downloads/indigo/2.9.2-0.2.0/site](http://www.scalastyle.org/downloads/indigo/2.9.2-0.2.0/site)
 <br/>
 Eclipse plugin (for 3.6 Helios): Update site [http://www.scalastyle.org/downloads/helios/2.9.2-0.2.0/site](http://www.scalastyle.org/downloads/helios/2.9.2-0.2.0/site)
 
