@@ -10,6 +10,11 @@ Choose one of the following:
  * [Scalastyle 0.2.0](http://www.scalastyle.org/downloads/indigo/2.9.2-0.2.0/site)
  * [Scalastyle master branch](http://www.scalastyle.org/downloads/indigo/master/site).
 
+### Juno 4.2
+
+ * [Scalastyle 0.2.0](http://www.scalastyle.org/downloads/juno/2.9.2-0.2.0/site).
+ * [Scalastyle master branch](http://www.scalastyle.org/downloads/juno/master/site).
+
 ### Helios 3.6
 
  * [Scalastyle 0.2.0](http://www.scalastyle.org/downloads/indigo/2.9.2-0.2.0/site).
