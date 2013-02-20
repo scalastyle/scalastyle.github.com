@@ -14,7 +14,7 @@ The repository for the Scalastyle maven plugin is: [Sonatype : https://oss.sonat
 ### Usage - scalastyle as part of build cycle
 To Configure the Scalastyle Plugin, you need to the add it in the &lt;build&gt; section of your pom.xml as shown in the sample below,
 and by default the build will fail if there are any violations of level error found.
-Default phase of execution is `verify`. The following is an example of a configuration which would be used in a pom:
+Default phase of execution is `verify`. The following is an example of a configuration which could be used in a pom:
 
 <pre>
     &lt;build&gt;
@@ -32,6 +32,8 @@ Default phase of execution is `verify`. The following is an example of a configu
               &lt;sourceDirectory&gt;${basedir}/src/main/scala&lt;/sourceDirectory&gt;
               &lt;testSourceDirectory&gt;${basedir}/src/test/scala&lt;/testSourceDirectory&gt;
               &lt;configLocation&gt;${basedir}/lib/scalastyle_config.xml&lt;/configLocation&gt;
+              &lt;outputFile&gt;${project.basedir}/scalastyle-output.xml&lt;/outputFile&gt;
+              &lt;outputEncoding&gt;UTF-8&lt;/outputEncoding&gt;
             &lt;/configuration&gt;
             &lt;executions&gt;
               &lt;execution&gt;
