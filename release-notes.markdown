@@ -3,6 +3,18 @@ layout: scalastyle
 title: "Scalastyle - Release notes"
 ---
 
+Version 0.3.0
+=============
+
+* Support for 2.10
+* Skip PublicMethodsHaveTypeChecker for constructors
+* Skip PublicMethodsHaveTypeChecker when function body does not exist
+* Added ignoreOverride parameter for PublicMethodsHaveTypeChecker, if true, don't check methods with override
+* For method names, ignore mutators by default (foo=_())
+* Allow declaration of a customID for rules, if a rule has more than one instance (for example a regex)
+* Add rule for block imports
+* Catch usage of ??? operator
+
 Version 0.2.0
 =============
 
@@ -67,3 +79,4 @@ The following checkers were added:
 * VarLocalChecker - Checks that functions do not define mutable variables
 * WhileChecker - Checks that while is not used
 * WhitespaceEndOfLineChecker - Check that there is no trailing whitespace at the end of lines
+

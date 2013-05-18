@@ -23,7 +23,7 @@ Default phase of execution is `verify`. The following is an example of a configu
           &lt;plugin&gt;
             &lt;groupId&gt;org.scalastyle&lt;/groupId&gt;
             &lt;artifactId&gt;scalastyle-maven-plugin&lt;/artifactId&gt;
-            &lt;version&gt;0.2.0&lt;/version&gt;
+            &lt;version&gt;0.3.0&lt;/version&gt;
             &lt;configuration&gt;
               &lt;verbose&gt;false&lt;/verbose&gt;
               &lt;failOnViolation&gt;true&lt;/failOnViolation&gt;
@@ -47,3 +47,14 @@ Default phase of execution is `verify`. The following is an example of a configu
         &lt;/plugins&gt;
     &lt;/build&gt;
 </pre>
+
+You can also specify multiple source directories if necessary. Replace the &lt;sourceDirectory&gt; element with &lt;sourceDirectories&gt;:
+
+<pre>
+    &lt;sourceDirectories&gt;
+      &lt;dir&gt;${basedir}/src/main/scala&lt;/dir&gt;
+      &lt;dir&gt;${basedir}/src/main/generated-scala&lt;/dir&gt;
+    &lt;/sourceDirectories&gt;
+</pre>
+
+and similarly for &lt;testSourceDirectory&gt; & &lt;testSourceDirectories&gt;.

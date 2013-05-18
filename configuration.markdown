@@ -5,8 +5,8 @@ title: "Scalastyle - Configuration"
 
 ### Quick start
 
-You can just use the default scalastyle configuration [scalastyle_config.xml](scalastyle_config.xml). Right-click this link and select `Save link as`.
-This is the one we use for scalastyle development, so it's obviously the best :-)
+You can just use the default Scalastyle configuration [scalastyle_config.xml](scalastyle_config.xml). Right-click this link and select `Save link as`.
+This is the one we use for Scalastyle development, so it's obviously the best :-)
 
 ### Format of the file
 
@@ -22,7 +22,7 @@ The configuration file is XML containing a list of rules to apply to your Scala 
 	 </check>
 	</scalastyle>
 
-Each *check* element is the name of the class which implements the checker along with any parameters. For a list of rules plus parameters, see [Implemented Rules](rules-0.2.0.html).
+Each *check* element is the name of the class which implements the checker along with any parameters. For a list of rules plus parameters, see [Implemented Rules](rules-0.3.0.html).
 
 ### Comment filters
 
@@ -47,3 +47,7 @@ If you wish to have a custom error message for a particular checker, then you ca
     <check level="warning" class="org.scalastyle.scalariform.MagicNumberChecker" enabled="true">
      <customMessage>Please don't use magic numbers</customMessage>
     </check>
+
+If you wish to have a customId associated with a rule (for instance you may have the same rule with multiple configurations), then you can specify the customId attribute:
+
+    <check customId="this.is.custom" level="warning" class="org.scalastyle.scalariform.MagicNumberChecker" enabled="true" />
