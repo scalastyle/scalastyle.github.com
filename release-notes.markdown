@@ -3,6 +3,12 @@ layout: scalastyle
 title: "Scalastyle - Release notes"
 ---
 
+Version 0.3.1
+=============
+
+* Dependency problems with maven plugin
+* Dependency problems with sbt plugin
+
 Version 0.3.0
 =============
 

@@ -10,7 +10,7 @@ Scalastyle was recently used as part of the grading framework for the course [Fu
 
 ### How do I use scalastyle?
 
-The latest stable version of Scalastyle is 0.3.0 for Scala 2.10. See the [Release Notes](release-notes.html)
+The latest stable version of Scalastyle is 0.3.1 for Scala 2.9.2 & 2.10. See the [Release Notes](release-notes.html)
 
 There are several ways of using it:
 
