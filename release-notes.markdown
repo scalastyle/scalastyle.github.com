@@ -3,6 +3,15 @@ layout: scalastyle
 title: "Scalastyle - Release notes"
 ---
 
+Version 0.3.2
+=============
+
+* Bugfixes with BlockImportChecker
+* Empty files no longer checked
+* Eclipse plugin: Don't check style in resources not on the classpath
+* Double click to edit configurations
+* Fixed problems with dependency in sbt plugin
+
 Version 0.3.1
 =============
 
