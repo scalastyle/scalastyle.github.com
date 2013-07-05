@@ -3,7 +3,7 @@ layout: scalastyle
 title: "Scalastyle: Implemented Rules"
 ---
 
-There are 48 rules which are currently implemented:
+There are 49 rules which are currently implemented:
 
 ### org.scalastyle.file.FileLengthChecker - Check the number of lines in a file
 
@@ -141,7 +141,7 @@ No parameters
 <pre>TBD</pre>
 ### org.scalastyle.scalariform.BlockImportChecker - Checks that block imports are not used.
 
- * id - block.import.checker
+ * id - block.import
  * description - Checks that block imports are not used.
  * class - org.scalastyle.scalariform.BlockImportChecker
  * default level - WarningLevel
@@ -648,6 +648,26 @@ If there are too many classes/objects defined in a single file, this can cause t
 
 ### Example configuration
 <pre>TBD</pre>
+### org.scalastyle.scalariform.ProcedureDeclarationChecker - Checks that block imports are not used.
+
+ * id - procedure.declaration
+ * description - Checks that block imports are not used.
+ * class - org.scalastyle.scalariform.ProcedureDeclarationChecker
+ * default level - WarningLevel
+
+#### Justification
+A procedure style declaration can cause confusion - the developer may have simply forgotten to add a '=', and now their method returns Unit rather than the inferred type: 
+  
+    def foo() { println("hello"); 5 }
+    def foo() = { println("hello"); 5 }
+    
+  This checker raises a warning with the first line. To fix it, use an explicit return type, or add a '=' before the body.
+
+#### Parameters
+No parameters
+
+### Example configuration
+<pre>&lt;check enabled=&quot;true&quot; class=&quot;org.scalastyle.scalariform.ProcedureDeclarationChecker&quot; level=&quot;warning&quot;/&gt;</pre>
 ### org.scalastyle.scalariform.PublicMethodsHaveTypeChecker - Check that a method has an explicit return type, it is not inferred
 
  * id - public.methods.have.type
