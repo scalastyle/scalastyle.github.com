@@ -3,7 +3,7 @@ layout: scalastyle
 title: "Scalastyle: Implemented Rules"
 ---
 
-There are 49 rules which are currently implemented:
+There are 50 rules which are currently implemented:
 
 ### org.scalastyle.file.FileLengthChecker - Check the number of lines in a file
 
@@ -35,6 +35,9 @@ Files which are too long can be hard to read and understand.
  * class - org.scalastyle.file.FileLineLengthChecker
  * default level - WarningLevel
 
+#### Justification
+Lines that are too long can be hard to read and horizontal scrolling is annoying.
+
 #### Parameters
 <table width="80%"><tr><th>Parameter</th><th>Description</th><th>Type</th><th>Default Value</th></tr><tr><td>maxLineLength</td>
 								<td>Maximum line length</td>
@@ -44,10 +47,20 @@ Files which are too long can be hard to read and understand.
 								<td>Tab size</td>
 								<td>integer</td>
 								<td>4</td>
+								</tr><tr><td>ignoreImports</td>
+								<td>Ignore import statements</td>
+								<td>boolean</td>
+								<td>false</td>
 								</tr></table>
 
 ### Example configuration
-<pre>TBD</pre>
+<pre>&lt;check enabled=&quot;true&quot; class=&quot;org.scalastyle.file.FileLineLengthChecker&quot; level=&quot;warning&quot;&gt;
+ &lt;parameters&gt;
+  &lt;parameter default=&quot;100&quot; type=&quot;integer&quot; name=&quot;maxLineLength&quot;/&gt;
+  &lt;parameter default=&quot;2&quot; type=&quot;integer&quot; name=&quot;tabSize&quot;/&gt;
+  &lt;parameter default=&quot;true&quot; type=&quot;boolean&quot; name=&quot;ignoreImports&quot;/&gt;
+ &lt;/parameters&gt;
+&lt;/check&gt;</pre>
 ### org.scalastyle.file.FileTabChecker - Check that there are no tabs in a file
 
  * id - line.contains.tab
@@ -179,7 +192,7 @@ No parameters
 
 #### Justification
 Scala generic type names are generally single upper case letters. This check checks for classes and traits.
- 
+
  Note that this check only checks the innermost type parameter, to allow for List\[T\].
 
 #### Parameters
@@ -272,6 +285,35 @@ No parameters
 
 ### Example configuration
 <pre>TBD</pre>
+### org.scalastyle.scalariform.ForBraceChecker - Checks that braces are used in for comprehensions
+
+ * id - for.brace
+ * description - Checks that braces are used in for comprehensions
+ * class - org.scalastyle.scalariform.ForBraceChecker
+ * default level - WarningLevel
+
+#### Justification
+Usage of braces (rather than parentheses) within a for comprehension mean that you don't have to specify a semi-colon at the end of every line:
+
+    for {      // braces
+      t <- List(1,2,3)
+      if (i % 2 == 0)
+    } yield t
+
+  is preferred to
+
+    for (      // parentheses
+      t <- List(1,2,3);
+      if (i % 2 == 0)
+    ) yield t
+
+  To fix it, replace the () with {}. And then remove the ; at the end of the lines.
+
+#### Parameters
+No parameters
+
+### Example configuration
+<pre>&lt;check enabled=&quot;true&quot; class=&quot;org.scalastyle.scalariform.ForBraceChecker&quot; level=&quot;warning&quot;/&gt;</pre>
 ### org.scalastyle.scalariform.IfBraceChecker - Checks that if statement have braces
 
  * id - if.brace
@@ -340,17 +382,17 @@ No parameters
 
 #### Justification
 A lower case pattern match clause with no other tokens is the same as \_; this is not true for patterns which start with an upper
-  case letter. This can cause confusion, and may not be what was intended: 
-  
+  case letter. This can cause confusion, and may not be what was intended:
+
     val foo = "foo"
     val Bar = "bar"
     "bar" match { case Bar => "we got bar" }   // result = "we got bar"
     "bar" match { case foo => "we got foo" }   // result = "we got foo"
     "bar" match { case `foo` => "we got foo" } // result = MatchError
-    
+
   This checker raises a warning with the second match. To fix it, use an identifier which starts with an upper case letter (best), use case \_ or,
   if you wish to refer to the value, add a type `: Any`
-  
+
     val lc = "lc"
     "something" match { case lc: Any => "lc" } // result = "lc"
     "something" match { case _ => "lc" } // result = "lc"
@@ -378,7 +420,7 @@ A simple assignment to a val is not considered to be a magic number, for example
 is not a magic number, but
 
     var foo = 4
-	
+
 is considered to be a magic number.
 
 #### Parameters
@@ -648,19 +690,19 @@ If there are too many classes/objects defined in a single file, this can cause t
 
 ### Example configuration
 <pre>TBD</pre>
-### org.scalastyle.scalariform.ProcedureDeclarationChecker - Checks that block imports are not used.
+### org.scalastyle.scalariform.ProcedureDeclarationChecker - Use a : Unit = for procedure declarations
 
  * id - procedure.declaration
- * description - Checks that block imports are not used.
+ * description - Use a : Unit = for procedure declarations
  * class - org.scalastyle.scalariform.ProcedureDeclarationChecker
  * default level - WarningLevel
 
 #### Justification
-A procedure style declaration can cause confusion - the developer may have simply forgotten to add a '=', and now their method returns Unit rather than the inferred type: 
-  
+A procedure style declaration can cause confusion - the developer may have simply forgotten to add a '=', and now their method returns Unit rather than the inferred type:
+
     def foo() { println("hello"); 5 }
     def foo() = { println("hello"); 5 }
-    
+
   This checker raises a warning with the first line. To fix it, use an explicit return type, or add a '=' before the body.
 
 #### Parameters
