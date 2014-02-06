@@ -5,3 +5,4 @@ mkdir _scalastyle.org
 cp -R _site/* _scalastyle.org
 echo please push to scalastyle.org
 echo ../push_to_org.sh
+

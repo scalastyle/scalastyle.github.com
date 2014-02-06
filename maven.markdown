@@ -23,7 +23,7 @@ Default phase of execution is `verify`. The following is an example of a configu
           &lt;plugin&gt;
             &lt;groupId&gt;org.scalastyle&lt;/groupId&gt;
             &lt;artifactId&gt;scalastyle-maven-plugin&lt;/artifactId&gt;
-            &lt;version&gt;0.3.2&lt;/version&gt;
+            &lt;version&gt;0.4.0&lt;/version&gt;
             &lt;configuration&gt;
               &lt;verbose&gt;false&lt;/verbose&gt;
               &lt;failOnViolation&gt;true&lt;/failOnViolation&gt;

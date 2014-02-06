@@ -7,16 +7,14 @@ Choose one of the following:
 
 ### Indigo 3.7
 
+ * [Scalastyle 0.4.0](http://www.scalastyle.org/downloads/indigo/2.10-0.4.0/site)
  * [Scalastyle 0.3.2](http://www.scalastyle.org/downloads/indigo/2.10-0.3.2/site)
- * [Scalastyle 0.3.0](http://www.scalastyle.org/downloads/indigo/2.10-0.3.0/site)
- * [Scalastyle 0.2.0](http://www.scalastyle.org/downloads/indigo/2.9.2-0.2.0/site)
  * [Scalastyle master branch](http://www.scalastyle.org/downloads/indigo/master/site).
 
 ### Juno 4.2
 
+ * [Scalastyle 0.4.0](http://www.scalastyle.org/downloads/juno/2.10-0.4.0/site).
  * [Scalastyle 0.3.2](http://www.scalastyle.org/downloads/juno/2.10-0.3.2/site).
- * [Scalastyle 0.3.0](http://www.scalastyle.org/downloads/juno/2.10-0.3.0/site).
- * [Scalastyle 0.2.0](http://www.scalastyle.org/downloads/juno/2.9.2-0.2.0/site).
  * [Scalastyle master branch](http://www.scalastyle.org/downloads/juno/master/site).
 
 ### Helios 3.6

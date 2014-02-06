@@ -3,6 +3,36 @@ layout: scalastyle
 title: "Scalastyle - Release notes"
 ---
 
+Version 0.4.0
+=============
+
+New rules:
+
+* ForBraceChecker - use braces instead of parens in for comprehensions
+* ProcedureDeclarationChecker - check use of def foo(): Unit = {} rather than def foo() {}
+
+Also:
+
+* Added info severity level #72
+* Can ignore a rule on a single line using // scalastyle:ignore
+* Update the cli to scopt 3.2.0 #75
+* Fixes MagicNumberCheck issues warning for 0L #69
+* Cyclomatic complexity checker now displays the actual figure, not just the limit #60
+* Added option to ignore line length of import statements in FileLineLengthCheckerTest
+
+Maven plugin:
+
+* Configuration file can be URL, classpath (using a dependency) or default configuration from Scalastyle jar
+
+sbt plugin:
+
+* Added failOnError setting - if true sbt will fail the build on Scalastyle errors #10
+* Build for 0.13.0 as well
+
+Eclipse plugin:
+
+* Don't check derived resources #14
+
 Version 0.3.2
 =============
 
