@@ -3,7 +3,7 @@ layout: scalastyle
 title: "Scalastyle: Implemented Rules"
 ---
 
-There are 50 rules which are currently implemented:
+There are 51 rules which are currently implemented:
 
 ### org.scalastyle.file.FileLengthChecker - Check the number of lines in a file
 
@@ -80,6 +80,10 @@ No parameters
  * class - org.scalastyle.file.HeaderMatchesChecker
  * default level - WarningLevel
 
+#### Justification
+A lot of projects require a header with a copyright notice, or they require a license in each file. This does a simple text comparison between the header and the first lines of the file.
+  You can have multiple lines, but make sure you surround the text with a CDATA section.
+
 #### Parameters
 <table width="80%"><tr><th>Parameter</th><th>Description</th><th>Type</th><th>Default Value</th></tr><tr><td>header</td>
 								<td>Header</td>
@@ -88,7 +92,11 @@ No parameters
 								</tr></table>
 
 ### Example configuration
-<pre>TBD</pre>
+<pre>&lt;check enabled=&quot;true&quot; class=&quot;org.scalastyle.file.HeaderMatchesChecker&quot; level=&quot;warning&quot;&gt;
+ &lt;parameters&gt;
+  &lt;parameter name=&quot;header&quot;&gt;// Copyright (C) 2011-2012 the original author or authors.&lt;/parameter&gt;
+ &lt;/parameters&gt;
+&lt;/check&gt;</pre>
 ### org.scalastyle.file.NewLineAtEofChecker - Checks that a file ends with a newline character
 
  * id - newline.at.eof
@@ -772,6 +780,35 @@ No parameters
 
 ### Example configuration
 <pre>TBD</pre>
+### org.scalastyle.scalariform.SpaceAfterCommentStartChecker - Checks a space after the start of the comment.
+
+ * id - space.after.comment.start
+ * description - Checks a space after the start of the comment.
+ * class - org.scalastyle.scalariform.SpaceAfterCommentStartChecker
+ * default level - WarningLevel
+
+#### Justification
+To bring consistency with how comments should be formatted, leave a space right after the beginning of the comment.
+
+    package foobar
+
+    object Foobar {
+    /**WRONG
+    *
+    */
+    /** Correct*/
+    val d = 2 /*Wrong*/ //Wrong
+    /**
+    *Correct
+    */
+    val e = 3/** Correct*/ // Correct
+    }
+
+#### Parameters
+No parameters
+
+### Example configuration
+<pre>&lt;check enabled=&quot;true&quot; class=&quot;org.scalastyle.scalariform.SpaceAfterCommentStartChecker&quot; level=&quot;warning&quot;/&gt;</pre>
 ### org.scalastyle.scalariform.SpacesAfterPlusChecker - Check that the plus sign is followed by a space
 
  * id - spaces.after.plus
