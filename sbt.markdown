@@ -35,3 +35,16 @@ Scalastyle Configuration file is `./scalastyle-config.xml` by default.
 To generate a configuration file, type 
 
     sbt scalastyle-generate-config
+    
+You can also have your scalastyle checks automatically run as part of another task:
+
+    // Create a default Scala style task to run with tests
+    lazy val testScalaStyle = taskKey[Unit]("testScalaStyle")
+    
+    testScalaStyle := {
+      org.scalastyle.sbt.PluginKeys.scalastyle.toTask("").value
+    }
+    
+    ...
+
+    (test in Test) <<= (test in Test) dependsOn testScalaStyle
