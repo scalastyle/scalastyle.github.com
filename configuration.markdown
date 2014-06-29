@@ -22,7 +22,7 @@ The configuration file is XML containing a list of rules to apply to your Scala 
 	 </check>
 	</scalastyle>
 
-Each *check* element is the name of the class which implements the checker along with any parameters. For a list of rules plus parameters, see [Implemented Rules](rules-0.4.0.html).
+Each *check* element is the name of the class which implements the checker along with any parameters. For a list of rules plus parameters, see [Implemented Rules](rules-0.5.0.html).
 
 ### Comment filters
 

@@ -3,6 +3,32 @@ layout: scalastyle
 title: "Scalastyle - Release notes"
 ---
 
+Version 0.5.0
+=============
+
+New rules:
+
+* DisallowSpaceAfterTokenChecker - check that no space appears after token(s)
+* DisallowSpaceBeforeTokenChecker - check that no space appears before token(s)
+* EnsureSingleSpaceAfterTokenChecker - check that a space appears after token(s)
+* EnsureSingleSpaceBeforeTokenChecker - check that a space appears before token(s)
+* ScalaDocChecker - checks that scaladoc exists for all members of a class
+* SpaceAfterCommentStartChecker - checks that all comment lines start with a space
+
+Also:
+
+
+* End of support for 2.9.x
+* End of support for Eclipse indigo, juno. Only kepler now supported. The others will still probably work.
+
+ Fixed crash on triple quoted interpolation #103
+* Uses com.typesafe.config rather than java properties - this may help usage of custom checkers
+* Removed scopt dependency
+* Include stacktrace in error message when checkers throw an exception. #91
+* IllegalImportsChecker now has exemptImports parameter
+* sbt plugin now uses sbt logging, not println
+* Add support for quiet/verbose output in TextOutput
+
 Version 0.4.0
 =============
 
