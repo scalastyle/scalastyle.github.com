@@ -31,7 +31,7 @@ For the maven plugin, see [Scalastyle Maven Plugin](maven.html)
 <br/>
 For the SBT plugin, see [Scalastyle SBT Plugin](sbt.html)
 <br/>
-Eclipse plugin (for 4.2 Juno / 4.3 Kepler): Update site [http://www.scalastyle.org/downloads/juno/2.10-0.5.0/site](http://www.scalastyle.org/downloads/juno/2.10-0.5.0/site)
+Eclipse plugin (for 4.2 Juno / 4.3 Kepler): Update site [http://www.scalastyle.org/downloads/kepler-2.10-0.5.0/site](http://www.scalastyle.org/downloads/kepler-2.10-0.5.0/site)
 
 The latest development snapshots are available from [Sonatype snapshots](https://oss.sonatype.org/content/repositories/snapshots/org/scalastyle/)
 
