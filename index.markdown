@@ -19,7 +19,7 @@ There are several ways of using it:
  * [SBT plugin](sbt.html)
  * [Command line](command-line.html)
  * [Gradle Plugin](https://github.com/MansurAshraf/gradle-scalastyle-plugin)
- * [Intellij Plugin] - watch this space
+ * Intellij Plugin - watch this space
 
 And you'll need a [configuration](configuration.html).
 
