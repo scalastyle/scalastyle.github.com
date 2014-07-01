@@ -15,7 +15,7 @@ The latest stable version of Scalastyle is 0.5.0 for Scala 2.10. See the [Releas
 There are several ways of using it:
 
  * [Maven Plugin](maven.html)
- * [Eclipse plugin (for 3.7 Indigo, 4.2 Juno and 3.6 Helios)](eclipse-index.html)
+ * [Eclipse plugin (for 4.2 Juno and 4.3 Kepler)](eclipse-index.html)
  * [SBT plugin](sbt.html)
  * [Command line](command-line.html)
  * [Gradle Plugin](https://github.com/MansurAshraf/gradle-scalastyle-plugin)
