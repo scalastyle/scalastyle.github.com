@@ -19,7 +19,7 @@ Also:
 * sbt plugin - Add support for remote config file (downloads once per day) #25
 * sbt plugin - fix various logging issues #28
 * HeaderMatchesChecker supports regular expressions #120
-* scalastyle-batch is now an uberjar, not a zip.
+* scalastyle-batch is now an uberjar, not a zip. See [scalastyle-batch.jar](https://oss.sonatype.org/service/local/repositories/releases/content/org/scalastyle/scalastyle_2.11/0.6.0/scalastyle_2.11-0.6.0-batch.jar)
 * Incorrect error messages from the sbt plugin #117
 * Fix `EnsureSingleSpaceAfterTokenChecker` when token is first one on line. #119
 * Various bugfixes in the ScalaDocChecker
