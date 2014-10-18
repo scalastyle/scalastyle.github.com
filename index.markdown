@@ -10,7 +10,7 @@ Scalastyle was recently used as part of the grading framework for the course [Fu
 
 ### How do I use scalastyle?
 
-The latest stable version of Scalastyle is 0.5.0 for Scala 2.10. See the [Release Notes](release-notes.html)
+The latest stable version of Scalastyle is 0.6.0 for Scala 2.10 and 2.11. See the [Release Notes](release-notes.html)
 
 There are several ways of using it:
 
@@ -25,24 +25,26 @@ And you'll need a [configuration](configuration.html).
 
 #### Download
 
-To download Scalastyle, the jar is available from [Sonatype](https://oss.sonatype.org/content/repositories/releases/org/scalastyle/scalastyle_2.10).
+To download Scalastyle, the jar is available from [Sonatype 2.11](https://oss.sonatype.org/content/repositories/releases/org/scalastyle/scalastyle_2.11). There is also a [version for 2.10](https://oss.sonatype.org/content/repositories/releases/org/scalastyle/scalastyle_2.10).
 <br/>
 For the maven plugin, see [Scalastyle Maven Plugin](maven.html)
 <br/>
 For the SBT plugin, see [Scalastyle SBT Plugin](sbt.html)
 <br/>
-Eclipse plugin (for 4.2 Juno / 4.3 Kepler): Update site [http://www.scalastyle.org/downloads/kepler-2.10-0.5.0/site](http://www.scalastyle.org/downloads/kepler-2.10-0.5.0/site)
+Eclipse plugin (for 4.2 Juno / 4.3 Kepler): Update site [http://www.scalastyle.org/downloads/kepler-0.6.0/site](http://www.scalastyle.org/downloads/kepler-0.6.0/site)
 
 The latest development snapshots are available from [Sonatype snapshots](https://oss.sonatype.org/content/repositories/snapshots/org/scalastyle/)
 
 ### Rules
 
-For a list of actual rules, see [Implemented Rules](rules-0.5.0.html).
+For a list of actual rules, see [Implemented Rules](rules-0.6.0.html).
 
 For a list of (planned) rules, see the [Scalastyle WIKI](https://github.com/scalastyle/scalastyle/wiki).
 If you want to add a rule, then please raise an [Issue](https://github.com/scalastyle/scalastyle/issues) (or even better a pull request)
 
 For a list of rules in the latest development version, see [Development Implemented Rules](rules-dev.html).
+
+For the version 0.6.0 rules, see [0.6.0 Implemented Rules](rules-0.6.0.html).
 
 For the version 0.5.0 rules, see [0.5.0 Implemented Rules](rules-0.5.0.html).
 

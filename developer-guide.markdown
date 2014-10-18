@@ -12,13 +12,13 @@ Want to contribute? Great! Look at the wiki for potential rules to implement, or
 3. Create a branch (`git checkout -b my_new_rule`)
 4. Commit your changes (`git commit -am "Added NoFooAllowed"`)
 5. Push to the branch (`git push origin my_new_rule`)
-6. Create an [Issue](https://github.com/scalastyle/scalastyle/issues) with a link to your branch
+6. Create a [PR](https://github.com/scalastyle/scalastyle/issues) with a link to your branch
 7. Enjoy a coffee and wait
 
 ### Pre-requisites
 
 * [git](http://gitscm.com/)
-* [Maven 3](http://maven.apache.org/)
+* [sbt](http://www.scala-sbt.org/)
 
 ### Source control (git & github) & building:
 
@@ -31,21 +31,21 @@ To clone the git repo, and check out the master branch:
     $ git clone git@github.com:<yourgithubnamehere>/scalastyle.git
     $ cd scalastyle
 
-Scalastyle uses [Maven 3](http://maven.apache.org/) to build. To create the distribution, run
+Scalastyle uses [sbt](http://www.scala-sbt.org/) to build. To create the distribution, run
 
-    $ mvn package
+    $ sbt package
 
-This will compile the source code and run the tests.
+You will need at least version 0.13.6 to build. This will compile the source code and run the tests.
 
 ### Getting started with development
 
 When you're developing, it's pretty much always a good idea to create a local branch and commit to that.
 
     $ git branch my-great-new-checker
-	$ git checkout my-great-new-checker
+	  $ git checkout my-great-new-checker
     $ ...
-	$ create beautiful code
-	$ git commit -m "checker to check that my code is great"
+	  $ create beautiful code
+	  $ git commit -m "checker to check that my code is great"
 	
 Then, when you've finished, go onto github, and create a pull request so that the code can be reviewed and pulled into the scalastyle repo.
 
@@ -53,7 +53,7 @@ Then, when you've finished, go onto github, and create a pull request so that th
 
 To run the tests:
 
-    $ mvn test
+    $ sbt test
 
 ### Submitting pull requests
 
@@ -62,7 +62,7 @@ an issue in github for scalastyle, which will notify the maintainers. The follow
 
 * We do Test Driven Development. Please create tests for your code.
 * The pull request is a single commit. This means that there will only be one log message for the change. This makes it a lot easier for everyone. See the section on squashing.
-* The code has the correct style. To check this, you can use Scalastyle :-). Seriously, use the scalastyle_dev_config.xml to check your code. When we have a maven plugin, this will be enforced. If anyone is interested in writing a maven plugin, please feel free.
+* The code has the correct style. To check this, you can use Scalastyle :-). Seriously, use the scalastyle_config.xml to check your code.
 
 ### What to work on
 

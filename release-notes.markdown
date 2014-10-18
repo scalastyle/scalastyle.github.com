@@ -3,6 +3,27 @@ layout: scalastyle
 title: "Scalastyle - Release notes"
 ---
 
+Version 0.6.0
+=============
+
+New rules:
+
+* IndentationChecker - check the indentation of your code
+* NonASCIICharacterChecker - check for use of non-ascii characters
+
+Also:
+
+* Support for 2.11
+* sbt plugin - support for `AutoPlugin` #21
+* sbt plugin - Add support for running scalastyle over test sources #27
+* sbt plugin - Add support for remote config file (downloads once per day) #25
+* sbt plugin - fix various logging issues #28
+* HeaderMatchesChecker supports regular expressions #120
+* scalastyle-batch is now an uberjar, not a zip.
+* Incorrect error messages from the sbt plugin #117
+* Fix `EnsureSingleSpaceAfterTokenChecker` when token is first one on line. #119
+* Various bugfixes in the ScalaDocChecker
+
 Version 0.5.0
 =============
 

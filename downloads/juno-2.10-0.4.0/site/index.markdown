@@ -1,6 +1,18 @@
 ---
 layout: scalastyle
-title: "Scalastyle - Scala style checker - Eclipse plugin for Juno 3.8/4.2"
+title: "Scalastyle - Scala style checker Eclipse plugin"
 ---
 
-This should only be accessed from Eclipse. Cut and paste the URL into the Available Software Sites in Eclipse Indigo.
+Choose one of the following:
+
+### Juno 4.2 / Kepler 4.3
+
+ * [Scalastyle 0.6.0](http://www.scalastyle.org/downloads/kepler-0.6.0/site).
+
+### Juno 4.2 / Kepler 4.3
+
+ * [Scalastyle 0.5.0](http://www.scalastyle.org/downloads/kepler-2.10-0.5.0/site).
+
+### Juno 4.2
+
+ * [Scalastyle 0.4.0](http://www.scalastyle.org/downloads/juno-2.10-0.4.0/site).
