@@ -3,7 +3,7 @@ layout: scalastyle
 title: "Scalastyle: Implemented Rules"
 ---
 
-There are 58 rules which are currently implemented:
+There are 59 rules which are currently implemented:
 
 | Checker        | Description  |
 | ------------- | ------------- |
@@ -28,6 +28,7 @@ There are 58 rules which are currently implemented:
 |[org.scalastyle.scalariform.EnsureSingleSpaceAfterTokenChecker](#org_scalastyle_scalariform_EnsureSingleSpaceAfterTokenChecker)|Ensure single space after certain token(s)|
 |[org.scalastyle.scalariform.EnsureSingleSpaceBeforeTokenChecker](#org_scalastyle_scalariform_EnsureSingleSpaceBeforeTokenChecker)|Ensure single space before certain token(s)|
 |[org.scalastyle.scalariform.EqualsHashCodeChecker](#org_scalastyle_scalariform_EqualsHashCodeChecker)|Check that if a class implements either equals or hashCode, it should implement the other|
+|[org.scalastyle.scalariform.FieldNamesChecker](#org_scalastyle_scalariform_FieldNamesChecker)|Check that field names match a regular expression|
 |[org.scalastyle.scalariform.ForBraceChecker](#org_scalastyle_scalariform_ForBraceChecker)|Checks that braces are used in for comprehensions|
 |[org.scalastyle.scalariform.IfBraceChecker](#org_scalastyle_scalariform_IfBraceChecker)|Checks that if statements have braces|
 |[org.scalastyle.scalariform.IllegalImportsChecker](#org_scalastyle_scalariform_IllegalImportsChecker)|Check that a class does not import certain classes|
@@ -443,6 +444,23 @@ TBD
 
 #### Parameters
 No parameters
+
+### Example configuration
+TBD
+<a name="org_scalastyle_scalariform_FieldNamesChecker" />
+### org.scalastyle.scalariform.FieldNamesChecker - Check that field names match a regular expression
+
+ * id - field.name
+ * description - Check that field names match a regular expression
+ * class - org.scalastyle.scalariform.FieldNamesChecker
+ * default level - WarningLevel
+
+#### Parameters
+<table width="80%"><tr><th>Parameter</th><th>Description</th><th>Type</th><th>Default Value</th></tr><tr><td>regex</td>
+								<td>Regular expression</td>
+								<td>string</td>
+								<td>^[a-z][A-Za-z0-9]*$</td>
+								</tr></table>
 
 ### Example configuration
 TBD
