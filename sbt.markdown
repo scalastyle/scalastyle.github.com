@@ -50,7 +50,7 @@ You can check your test sources `(scalaSources in Test)` using the `test:scalast
 
 This has exactly the same output as the scalastyle command, except that the generated XML file is `target/scalastyle-test-result.xml` by default. All of the configuration options for the `scalastyle` command are available in the Test configuration for `test:scalastyle`, but you need to use the `Test` configuration. For instance:
 
-    (scalastyleConfig in Test) := baseDirectory / "scalastyle-test-config.xml"
+    (scalastyleConfig in Test) := baseDirectory.value / "scalastyle-test-config.xml"
 
     (scalastyleConfig in Test) := file("/foo/bar/scalastyle-test-config.xml")
 
