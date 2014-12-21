@@ -78,6 +78,18 @@ No parameters
 
 No parameters
 
+### Class org.scalastyle.scalariform.FieldNamesChecker - Check that field names match a regular expression
+
+ * id - field.name
+ * default level - WarningLevel
+
+Parameters
+<table width="50%"><tr><th>Parameter</th><th>Description</th><th>Type</th><th>Default Value</th></tr><tr><td>regex</td>
+								<td>Regular expression</td>
+								<td>string</td>
+								<td>^[a-z][A-Za-z0-9]*$</td>
+								</tr></table>
+
 ### Class org.scalastyle.scalariform.IllegalImportsChecker - Check that a class does not import certain classes
 
  * id - illegal.imports
