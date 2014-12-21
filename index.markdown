@@ -15,7 +15,7 @@ The latest stable version of Scalastyle is 0.6.0 for Scala 2.10 and 2.11. See th
 There are several ways of using it:
 
  * [Maven Plugin](maven.html)
- * [Eclipse plugin (for 4.2 Juno and 4.3 Kepler)](eclipse-index.html)
+ * [Eclipse plugin (for 4.2 Juno and 4.3 Kepler and 4.4 Luna)](eclipse-index.html)
  * [SBT plugin](sbt.html)
  * [Command line](command-line.html)
  * [Gradle Plugin](https://github.com/MansurAshraf/gradle-scalastyle-plugin)
@@ -32,6 +32,8 @@ For the maven plugin, see [Scalastyle Maven Plugin](maven.html)
 For the SBT plugin, see [Scalastyle SBT Plugin](sbt.html)
 <br/>
 Eclipse plugin (for 4.2 Juno / 4.3 Kepler): Update site [http://www.scalastyle.org/downloads/kepler-0.6.0/site](http://www.scalastyle.org/downloads/kepler-0.6.0/site)
+<br/>
+Eclipse plugin (for 4.4 Luna): Update site [http://www.scalastyle.org/downloads/luna-0.6.0/site](http://www.scalastyle.org/downloads/luna-0.6.0/site)
 
 The latest development snapshots are available from [Sonatype snapshots](https://oss.sonatype.org/content/repositories/snapshots/org/scalastyle/)
 
