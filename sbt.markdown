@@ -61,16 +61,21 @@ This has exactly the same output as the scalastyle command, except that the gene
 You can also have your scalastyle checks automatically run as part of another task:
 
     // Create a default Scala style task to run with tests
-    lazy val testScalaStyle = taskKey[Unit]("testScalaStyle")
-    
-    testScalaStyle := {
-      org.scalastyle.sbt.PluginKeys.scalastyle.toTask("").value
-    }
-    
-    ...
+    lazy val testScalastyle = taskKey[Unit]("testScalastyle")
 
-    (test in Test) <<= (test in Test) dependsOn testScalaStyle
+    testScalastyle := org.scalastyle.sbt.ScalastylePlugin.scalastyle.in(Test).toTask("").value
 
+    (test in Test) <<= (test in Test) dependsOn testScalastyle
+
+or as part of the compile task:
+
+    lazy val compileScalastyle = taskKey[Unit]("compileScalastyle")
+
+    compileScalastyle := org.scalastyle.sbt.ScalastylePlugin.scalastyle.in(Compile).toTask("").value
+
+    (compile in Compile) <<= (compile in Compile) dependsOn compileScalastyle
+
+But note that this makes the compile task dependent on the scalastyle task - the scalastyle task executes first. This can cause problems because if the code doesn't compile, you'll get the scalastyle errors messages, not the scalac ones. Great though scalastyle is, it can't match the error messages produced by the compiler. :-)
 
 ## Version 0.5.0 and before
 
