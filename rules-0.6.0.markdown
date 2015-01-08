@@ -485,7 +485,22 @@ No parameters
  * default level - WarningLevel
 
 #### Justification
-Some people find if clauses with braces easier to read.
+Some people find if clauses with braces easier to read. 
+The singleLineAllowed property allows if constructions of the type:
+
+	if (bool_expression) expression1 else expression2
+
+The doubleLineAllowed property allows if constructions of the type:
+
+	if (bool_expression) expression1
+	else expression2
+
+Note: If you intend to enable only if expressions in the format below, disable the IfBraceChecker altogether.
+
+	if (bool_expression) 
+		expression1
+	else 
+		expression2	
 
 #### Parameters
 <table width="80%"><tr><th>Parameter</th><th>Description</th><th>Type</th><th>Default Value</th></tr><tr><td>singleLineAllowed</td>
