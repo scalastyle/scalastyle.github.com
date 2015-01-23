@@ -42,6 +42,36 @@ This produces a list of errors on the console, as well as an XML result file `ta
 |scalastyleFailOnError       |Boolean      |If true, the scalastyle task fails if any messages at error level are output. Default value is false.
 |scalastyleConfigUrlCacheFile|String       |When scalastyleConfigUrl is used, the name of the local file in which it is stored. Default is `target/scalastyle-config.xml`
 
+If the remote source for your `scalastyle-config.xml` file is secured and requires the passing of tokens in the header of the http request or ssh authentication then scalastyleConfigUrl will not suffice. A work around is to define your own update task and make scalastyle depend on it in your `build.sbt` or `Build.scala`.
+
+This example use enterprise github (private repositories) through the REST API v3,  bitbucket API to get raw files is similar:
+
+    lazy val updateScalaStyle = taskKey[Unit]("updateScalaStyle")
+
+    updateScalaStyle := {
+      /**
+       * Create a security token under Github > Profile Settings > Application
+       * add repo_org in the scope of that token
+       * set it to environment variable SBT_GITHUB_TOKEN
+       *
+       * ex:
+       * export SBT_GITHUB_TOKEN='1234567890abcdef1234567890abcdef'
+       */
+      sys.env.get("SBT_GITHUB_TOKEN") match {
+        case Some(oauthToken) =>
+          val configFileUrl = "https://raw.githubusercontent.com/[owner]/[repository]/[branch_or_commit]/[path]/scalastyle-config.xml"
+          val result: Int = file("target/scalastyle-config.xml") #< s"curl --fail -u $oauthToken:x-oauth-basic $configFileUrl" !
+        case None =>
+          println("Please set system variable SBT_GITHUB_TOKEN to update scalastyle config file")
+      }
+    }
+
+    (scalastyle in Compile) <<= (scalastyle in Compile) dependsOn updateScalaStyle
+
+    (scalastyle in Test) <<= (scalastyle in Test) dependsOn updateScalaStyle
+
+NB: This uses `curl` so, while it works correctly on MacOS and Linux (or other *NIX) it might give problem on windows environments.
+
 ### Running scalastyle on your test sources
 
 You can check your test sources `(scalaSources in Test)` using the `test:scalastyle` command
