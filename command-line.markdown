@@ -7,7 +7,7 @@ title: "Scalastyle - Command line"
 
 Download [scalastyle-batch 2.10](https://oss.sonatype.org/content/repositories/releases/org/scalastyle/scalastyle_2.10/0.6.0/scalastyle_2.10-0.6.0-batch.jar) or [scalastyle-batch 2.11](https://oss.sonatype.org/content/repositories/releases/org/scalastyle/scalastyle_2.11/0.6.0/scalastyle_2.11-0.6.0-batch.jar).
 
-This zip contains an executable jar along with the dependencies in lib/. Unzip this file somewhere, and run the jar like:
+Run the jar like:
 
     $ java -jar scalastyle-batch_2.10.jar --config lib/scalastyle_config.xml src/main/scala
 
