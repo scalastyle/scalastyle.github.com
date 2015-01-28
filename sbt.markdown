@@ -70,7 +70,7 @@ This example use enterprise github (private repositories) through the REST API v
 
     (scalastyle in Test) <<= (scalastyle in Test) dependsOn updateScalaStyle
 
-NB: This uses `curl` so, while it works correctly on MacOS and Linux (or other *NIX) it might give problem on windows environments.
+NB: This uses `curl` so, while it works correctly on MacOS and Linux (or other \*NIX) it might give problem on windows environments.
 
 ### Running scalastyle on your test sources
 
