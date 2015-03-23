@@ -175,7 +175,7 @@ No parameters
  * default level - WarningLevel
 
 #### Justification
-If there are too many classes/objects defined in a single file, this can cause the code to be difficult to understand.
+If the code is too complex, then this can make code hard to read.
 
 #### Parameters
 <table width="80%"><tr><th>Parameter</th><th>Description</th><th>Type</th><th>Default Value</th></tr><tr><td>maximum</td>
