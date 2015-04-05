@@ -3,6 +3,22 @@ layout: scalastyle
 title: "Scalastyle - Release notes"
 ---
 
+Version 0.7.0
+=============
+
+New rules:
+
+* FieldNameChecker - check the names of fields
+* XmlLiteralChecker - check the use of XML literals
+
+Also:
+
+* Fix `SpacesAfterPlusChecker` - only applies to infix expressions #124
+* Fix `PublicMethodsHaveTypeChecker` should not flag nested defs #48
+* lots of documentation improvements
+* maven plugin creates directories if necessary
+* Add support for external rules #25 [custom-rules](custom-rules.html)
+
 Version 0.6.0
 =============
 

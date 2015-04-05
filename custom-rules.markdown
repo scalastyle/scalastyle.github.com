@@ -9,7 +9,7 @@ Some people have rules which are specific to their sites, and which are not in t
 
 First, you will need to create a jar containing your custom rules. This should contain the classes and a `reference.conf` typesafe config file, which contains the error messages for your rule.
 
-The sbt, maven and command line support custom rules. Please note that this is still in development, and is part of `0.7.0-SNAPSHOT`.
+The sbt, maven and command line support custom rules, since version `0.7.0`.
 
 ### Creating your jar
 
@@ -56,7 +56,7 @@ Once you have the jar, you'll have to modify your sbt plugin configuration, your
 
 sbt is easy. You can add the jar as a normal library dependency into your `project/plugins.sbt`:
 
-    addSbtPlugin("org.scalastyle" %% "scalastyle-sbt-plugin" % "0.7.0-SNAPSHOT")
+    addSbtPlugin("org.scalastyle" %% "scalastyle-sbt-plugin" % "0.7.0")
     
     libraryDependencies += "org.ext" %% "nofoobarchecker" % "1.0.0"
     
@@ -71,7 +71,7 @@ Maven is also easy. You can add the jar as a normal dependency of the scalastyle
     <plugin>
       <groupId>org.scalastyle</groupId>
       <artifactId>scalastyle-maven-plugin</artifactId>
-      <version>0.7.0-SNAPSHOT</version>
+      <version>0.7.0</version>
       <configuration>
         ...
       </configuration>
