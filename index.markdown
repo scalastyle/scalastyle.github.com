@@ -16,6 +16,7 @@ There are several ways of using it:
 
  * [Maven Plugin](maven.html)
  * [Eclipse plugin (for 4.2 Juno and 4.3 Kepler and 4.4 Luna)](eclipse-index.html)
+ * [Git pre-commit hook](git-pre-commit-hook.html)
  * [SBT plugin](sbt.html)
  * [Command line](command-line.html)
  * [Gradle Plugin](https://github.com/MansurAshraf/gradle-scalastyle-plugin)
