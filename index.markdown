@@ -48,7 +48,7 @@ If you want to add a rule, then please raise an [Issue](https://github.com/scala
 
 For a list of rules in the latest development version, see [Development Implemented Rules](rules-dev.html).
 
-For the version 0.6.0 rules, see [0.7.0 Implemented Rules](rules-0.7.0.html).
+For the version 0.7.0 rules, see [0.7.0 Implemented Rules](rules-0.7.0.html).
 
 For the version 0.6.0 rules, see [0.6.0 Implemented Rules](rules-0.6.0.html).
 
