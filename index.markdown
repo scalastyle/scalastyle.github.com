@@ -16,11 +16,11 @@ There are several ways of using it:
 
  * [Maven Plugin](maven.html)
  * [Eclipse plugin (for 4.2 Juno and 4.3 Kepler and 4.4 Luna)](eclipse-index.html)
- * [Git pre-commit hook](git-pre-commit-hook.html)
  * [SBT plugin](sbt.html)
  * [Command line](command-line.html)
  * [Gradle Plugin](https://github.com/MansurAshraf/gradle-scalastyle-plugin)
- * Intellij Plugin - watch this space
+ * Intellij - You can enable scalastyle in Intellij by selecting Settings->Editor->Inspections, then searching for Scala style inspections.
+ * [Git pre-commit hook](git-pre-commit-hook.html)
 
 And you'll need a [configuration](configuration.html). If you have your own custom rules, then see [custom rules](custom-rules.html)
 
