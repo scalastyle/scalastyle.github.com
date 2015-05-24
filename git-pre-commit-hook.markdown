@@ -12,6 +12,6 @@ scalastyle as a Git pre-commit hook.
 To configure overcommit to run scalastyle, include the following in your
 `.overcommit.yml` file:
 
-    PreCommt:
+    PreCommit:
       Scalastyle:
         enabled: true
