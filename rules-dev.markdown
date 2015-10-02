@@ -3,7 +3,7 @@ layout: scalastyle
 title: "Scalastyle: Implemented Rules"
 ---
 
-There are 60 rules which are currently implemented:
+There are 62 rules which are currently implemented:
 
 | Checker        | Description  |
 | ------------- | ------------- |
@@ -33,6 +33,7 @@ There are 60 rules which are currently implemented:
 |[org.scalastyle.scalariform.IfBraceChecker](#org_scalastyle_scalariform_IfBraceChecker)|Checks that if statements have braces|
 |[org.scalastyle.scalariform.IllegalImportsChecker](#org_scalastyle_scalariform_IllegalImportsChecker)|Check that a class does not import certain classes|
 |[org.scalastyle.scalariform.ImportGroupingChecker](#org_scalastyle_scalariform_ImportGroupingChecker)|Checks that imports are grouped together, not throughout the file|
+|[org.scalastyle.scalariform.ImportOrderChecker](#org_scalastyle_scalariform_ImportOrderChecker)|Checks that imports are grouped and ordered according to the style configuration.|
 |[org.scalastyle.scalariform.LowercasePatternMatchChecker](#org_scalastyle_scalariform_LowercasePatternMatchChecker)|Checks that a case statement pattern match is not lower case, as this can cause confusion|
 |[org.scalastyle.scalariform.MagicNumberChecker](#org_scalastyle_scalariform_MagicNumberChecker)|Checks for use of magic numbers|
 |[org.scalastyle.scalariform.MethodLengthChecker](#org_scalastyle_scalariform_MethodLengthChecker)|Checks that methods do not exceed a maximum length|
@@ -50,6 +51,7 @@ There are 60 rules which are currently implemented:
 |[org.scalastyle.scalariform.ObjectNamesChecker](#org_scalastyle_scalariform_ObjectNamesChecker)|Check that object names match a regular expression|
 |[org.scalastyle.scalariform.PackageObjectNamesChecker](#org_scalastyle_scalariform_PackageObjectNamesChecker)|Check that package object names match a regular expression|
 |[org.scalastyle.scalariform.ParameterNumberChecker](#org_scalastyle_scalariform_ParameterNumberChecker)|Maximum number of parameters for a method|
+|[org.scalastyle.scalariform.PatternMatchAlignChecker](#org_scalastyle_scalariform_PatternMatchAlignChecker)|Check that pattern match arrows align|
 |[org.scalastyle.scalariform.ProcedureDeclarationChecker](#org_scalastyle_scalariform_ProcedureDeclarationChecker)|Use a : Unit = for procedure declarations|
 |[org.scalastyle.scalariform.PublicMethodsHaveTypeChecker](#org_scalastyle_scalariform_PublicMethodsHaveTypeChecker)|Check that a method has an explicit return type, it is not inferred|
 |[org.scalastyle.scalariform.RedundantIfChecker](#org_scalastyle_scalariform_RedundantIfChecker)|Checks that if expressions are not redundant, i.e. easily replaced by a variant of the condition|
@@ -164,14 +166,14 @@ A lot of projects require a header with a copyright notice, or they require a li
 <pre>&lt;check enabled=&quot;true&quot; class=&quot;org.scalastyle.file.HeaderMatchesChecker&quot; level=&quot;warning&quot;&gt;
  &lt;parameters&gt;
   &lt;parameter name=&quot;regex&quot;&gt;false&lt;/parameter&gt;
-  &lt;parameter name=&quot;header&quot;&gt;// Copyright (C) 2011-2012 the original author or authors.&lt;/parameter&gt;
+  &lt;parameter name=&quot;header&quot;&gt;// Copyright \(C\) 2011-2012 the original author or authors.&lt;/parameter&gt;
  &lt;/parameters&gt;
 &lt;/check&gt;</pre>
 or
 <pre>&lt;check enabled=&quot;true&quot; class=&quot;org.scalastyle.file.HeaderMatchesChecker&quot; level=&quot;warning&quot;&gt;
  &lt;parameters&gt;
   &lt;parameter name=&quot;regex&quot;&gt;true&lt;/parameter&gt;
-  &lt;parameter name=&quot;header&quot;&gt;// Copyright (C) (?:\d{4}-)?\d{4} the original author or authors.&lt;/parameter&gt;
+  &lt;parameter name=&quot;header&quot;&gt;// Copyright \(C\) (?:\d{4}-)?\d{4} the original author or authors.&lt;/parameter&gt;
  &lt;/parameters&gt;
 &lt;/check&gt;</pre>
 <a name="org_scalastyle_file_IndentationChecker" />
@@ -190,12 +192,17 @@ Code that is not indented consistently can be hard to read.
 								<td>Tab size</td>
 								<td>integer</td>
 								<td>2</td>
+								</tr><tr><td>methodParamIndentSize</td>
+								<td>Multi-line method parameter spacing</td>
+								<td>integer</td>
+								<td>2</td>
 								</tr></table>
 
 ### Example configuration
 <pre>&lt;check enabled=&quot;true&quot; class=&quot;org.scalastyle.file.IndentationChecker&quot; level=&quot;warning&quot;&gt;
  &lt;parameters&gt;
   &lt;parameter name=&quot;tabSize&quot;&gt;2&lt;/parameter&gt;
+  &lt;parameter name=&quot;methodParamIndentSize&quot;&gt;2&lt;/parameter&gt;
  &lt;/parameters&gt;
 &lt;/check&gt;</pre>
 <a name="org_scalastyle_file_NewLineAtEofChecker" />
@@ -582,9 +589,9 @@ The doubleLineAllowed property allows if constructions of the type:
 
 Note: If you intend to enable only if expressions in the format below, disable the IfBraceChecker altogether.
 
-    if (bool_expression) 
+    if (bool_expression)
       expression1
-    else 
+    else
       expression2
 
 #### Parameters
@@ -642,6 +649,29 @@ No parameters
 
 ### Example configuration
 <pre>&lt;check enabled=&quot;true&quot; class=&quot;org.scalastyle.scalariform.ImportGroupingChecker&quot; level=&quot;warning&quot;/&gt;</pre>
+<a name="org_scalastyle_scalariform_ImportOrderChecker" />
+### org.scalastyle.scalariform.ImportOrderChecker - Checks that imports are grouped and ordered according to the style configuration.
+
+ * id - import.ordering
+ * description - Checks that imports are grouped and ordered according to the style configuration.
+ * class - org.scalastyle.scalariform.ImportOrderChecker
+ * default level - WarningLevel
+
+#### Justification
+Consistent import ordering improves code readability and reduces unrelated changes in patches.
+
+#### Parameters
+No parameters
+
+### Example configuration
+<pre>&lt;check enabled=&quot;true&quot; class=&quot;org.scalastyle.scalariform.ImportOrderChecker&quot; level=&quot;warning&quot;&gt;
+ &lt;parameters&gt;
+  &lt;parameter name=&quot;groups&quot;&gt;java,scala,others&lt;/parameter&gt;
+  &lt;parameter name=&quot;group.java&quot;&gt;javax?\..+&lt;/parameter&gt;
+  &lt;parameter name=&quot;group.scala&quot;&gt;scala\..+&lt;/parameter&gt;
+  &lt;parameter name=&quot;group.others&quot;&gt;.+&lt;/parameter&gt;
+ &lt;/parameters&gt;
+&lt;/check&gt;</pre>
 <a name="org_scalastyle_scalariform_LowercasePatternMatchChecker" />
 ### org.scalastyle.scalariform.LowercasePatternMatchChecker - Checks that a case statement pattern match is not lower case, as this can cause confusion
 
@@ -1045,6 +1075,22 @@ A method which has more than a certain number of parameters can be hard to under
   &lt;parameter name=&quot;maxParameters&quot;&gt;8&lt;/parameter&gt;
  &lt;/parameters&gt;
 &lt;/check&gt;</pre>
+<a name="org_scalastyle_scalariform_PatternMatchAlignChecker" />
+### org.scalastyle.scalariform.PatternMatchAlignChecker - Check that pattern match arrows align
+
+ * id - pattern.match.align
+ * description - Check that pattern match arrows align
+ * class - org.scalastyle.scalariform.PatternMatchAlignChecker
+ * default level - WarningLevel
+
+#### Justification
+Correct formatting can help readability.
+
+#### Parameters
+No parameters
+
+### Example configuration
+<pre>&lt;check enabled=&quot;true&quot; class=&quot;org.scalastyle.scalariform.PatternMatchAlignChecker&quot; level=&quot;warning&quot;/&gt;</pre>
 <a name="org_scalastyle_scalariform_ProcedureDeclarationChecker" />
 ### org.scalastyle.scalariform.ProcedureDeclarationChecker - Use a : Unit = for procedure declarations
 
@@ -1134,10 +1180,18 @@ No parameters
 Scaladoc is generally considered a good thing. Within reason.
 
 #### Parameters
-No parameters
+<table width="80%"><tr><th>Parameter</th><th>Description</th><th>Type</th><th>Default Value</th></tr><tr><td>ignoreRegex</td>
+								<td>Regular expression</td>
+								<td>string</td>
+								<td>^$</td>
+								</tr></table>
 
 ### Example configuration
-<pre>&lt;check enabled=&quot;true&quot; class=&quot;org.scalastyle.scalariform.ScalaDocChecker&quot; level=&quot;warning&quot;/&gt;</pre>
+<pre>&lt;check enabled=&quot;true&quot; class=&quot;org.scalastyle.scalariform.ScalaDocChecker&quot; level=&quot;warning&quot;&gt;
+ &lt;parameters&gt;
+  &lt;parameter name=&quot;ignoreRegex&quot;&gt;(.*Spec$)|(.*SpecIT$)&lt;/parameter&gt;
+ &lt;/parameters&gt;
+&lt;/check&gt;</pre>
 <a name="org_scalastyle_scalariform_SimplifyBooleanExpressionChecker" />
 ### org.scalastyle.scalariform.SimplifyBooleanExpressionChecker - Boolean expression can be simplified
 
