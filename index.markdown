@@ -18,7 +18,7 @@ There are several ways of using it:
  * [Eclipse plugin (for 4.2 Juno and 4.3 Kepler and 4.4 Luna)](eclipse-index.html)
  * [SBT plugin](sbt.html)
  * [Command line](command-line.html)
- * [Gradle Plugin](https://github.com/MansurAshraf/gradle-scalastyle-plugin)
+ * [Gradle Plugin](https://github.com/ngbinh/gradle-scalastyle-plugin)
  * Intellij - You can enable scalastyle in Intellij by selecting Settings->Editor->Inspections, then searching for Scala style inspections.
  * [Git pre-commit hook](git-pre-commit-hook.html)
 
