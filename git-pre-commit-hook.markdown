@@ -15,3 +15,4 @@ To configure overcommit to run scalastyle, include the following in your
     PreCommit:
       Scalastyle:
         enabled: true
+        flags: ['-c', 'path/to/scalastyle-config.xml']
