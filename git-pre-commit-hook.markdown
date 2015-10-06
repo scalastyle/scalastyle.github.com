@@ -16,3 +16,6 @@ To configure overcommit to run scalastyle, include the following in your
       Scalastyle:
         enabled: true
         flags: ['-c', 'path/to/scalastyle-config.xml']
+
+This requires you to have a `scalastyle` executable on your PATH.  See the
+[command line](../command-line.html) documentation for more info.
