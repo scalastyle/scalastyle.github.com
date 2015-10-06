@@ -5,26 +5,23 @@ title: "Scalastyle - Command line"
 
 ### Running scalastyle as an executable
 
-Some tools (like [overcommit](../git-pre-commit-hook.html)) require a `scalastyle`
-executable to be on your PATH -
+Some tools (like [overcommit](git-pre-commit-hook.html) require a `scalastyle`
+executable to be on your PATH
 
-* **Mac OS X** - [Homebrew](http://brew.sh/) makes it easy to install scalastyle -
-```
-$ brew install scalastyle
-```
+**Mac OS X** - [Homebrew](http://brew.sh/) makes it easy to install scalastyle
 
-* **Linux** - Save the following script as `scalastyle`, place it on your PATH,
+    $ brew install scalastyle
+
+**Linux** - Save the following script as `scalastyle`, place it on your PATH,
   then make it executable via `chmod +x path/to/scalastyle`.  Note that you will
-  need to download the appropriate scalastyle-batch.jar and update its path
-  accordingly -
-```
-#!/bin/bash
-java -jar path/to/scalastyle_2.10-0.6.0-batch.jar "$@"
-```
+  need to download the appropriate scalastyle-batch.jar and update its path accordingly
+
+    #!/bin/bash
+    java -jar path/to/scalastyle_2.10-0.7.0-batch.jar "$@"
 
 ### Running scalastyle from the command line (version 0.6.0 and later)
 
-Download [scalastyle-batch 2.10](https://oss.sonatype.org/content/repositories/releases/org/scalastyle/scalastyle_2.10/0.6.0/scalastyle_2.10-0.6.0-batch.jar) or [scalastyle-batch 2.11](https://oss.sonatype.org/content/repositories/releases/org/scalastyle/scalastyle_2.11/0.6.0/scalastyle_2.11-0.6.0-batch.jar).
+Download [scalastyle-batch 2.10](https://oss.sonatype.org/content/repositories/releases/org/scalastyle/scalastyle_2.10/0.7.0/scalastyle_2.10-0.7.0-batch.jar) or [scalastyle-batch 2.11](https://oss.sonatype.org/content/repositories/releases/org/scalastyle/scalastyle_2.11/0.7.0/scalastyle_2.11-0.6.0-batch.jar).
 
 Run the jar like:
 
