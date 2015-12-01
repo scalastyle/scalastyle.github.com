@@ -5,7 +5,7 @@ title: "Scalastyle - SBT plugin"
 
 ### Overview
 
-This project is intended to provide Scala 2.10 / SBT 0.13 plugin support for Scalastyle. The current version of the plugin is 0.7.0.
+This project is intended to provide Scala 2.10 / SBT 0.13 plugin support for Scalastyle. The current version of the plugin is 0.8.0.
 
 ### Repository
 
@@ -15,7 +15,7 @@ The repository for the Scalastyle SBT plugin is: [Sonatype : https://oss.sonatyp
 
 Add the following lines to `project/plugins.sbt`
 
-    addSbtPlugin("org.scalastyle" %% "scalastyle-sbt-plugin" % "0.7.0")
+    addSbtPlugin("org.scalastyle" %% "scalastyle-sbt-plugin" % "0.8.0")
 
     resolvers += "sonatype-releases" at "https://oss.sonatype.org/content/repositories/releases/"
 

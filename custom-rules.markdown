@@ -56,7 +56,7 @@ Once you have the jar, you'll have to modify your sbt plugin configuration, your
 
 sbt is easy. You can add the jar as a normal library dependency into your `project/plugins.sbt`:
 
-    addSbtPlugin("org.scalastyle" %% "scalastyle-sbt-plugin" % "0.7.0")
+    addSbtPlugin("org.scalastyle" %% "scalastyle-sbt-plugin" % "0.8.0")
     
     libraryDependencies += "org.ext" %% "nofoobarchecker" % "1.0.0"
     
@@ -71,7 +71,7 @@ Maven is also easy. You can add the jar as a normal dependency of the scalastyle
     <plugin>
       <groupId>org.scalastyle</groupId>
       <artifactId>scalastyle-maven-plugin</artifactId>
-      <version>0.7.0</version>
+      <version>0.8.0</version>
       <configuration>
         ...
       </configuration>

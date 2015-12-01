@@ -3,6 +3,37 @@ layout: scalastyle
 title: "Scalastyle - Release notes"
 ---
 
+Version 0.8.0
+=============
+
+
+New rules:
+
+* TodoCommentChecker - tests for presence of TODOs and FIXMEs
+* ImportGroupingChecker - checks grouping and ordering of imports
+* PatternMatchChecker - checks alignment of arrows in pattern matches
+
+New parameters to existing checkers
+
+* RegexChecker has a `line` parameter which allows line by line regular expression matching
+* IndentationChecker has `methodParamIndentSize` parameter which allows specification of the amount of indentation for multi-line method parameters
+* ScalaDocChecker has a `ignoreRegex` parameter into the ScalaDocChecker - classes which match are not checked
+
+Other:
+
+* sbt plugin - sources can be specified to scalastyle using the scalastyleSources setting - this is by default scalaSource
+* sbt plugin - quiet flag is more quiet
+* command line - option added to ignore certain files via un regex
+
+* Fix: #159 TextOutput takes account of quiet and verbose
+* Fix: #123 False positive in ScalaDocChecker
+* Fix: #145 ProcedureDeclarationChecker - a constructor with a body containing braces was not correctly handled
+* Fix: #33  Cyclomatic complexity - an inner method is not counted as part of a method for the cyclomatic complexity calculation
+* Fix: #144 // scalastyle:ignore did not work
+* Fix: #157 Use scalariform 0.1.7, which fixes some problems with Scala 2.11, including #156
+
+* Various documentation fixes
+
 Version 0.7.0
 =============
 
