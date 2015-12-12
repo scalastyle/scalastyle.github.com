@@ -13,11 +13,9 @@ The repository for the Scalastyle SBT plugin is: [Sonatype : https://oss.sonatyp
 
 ### Setup
 
-Add the following lines to `project/plugins.sbt`
+Add the following line to `project/plugins.sbt`
 
     addSbtPlugin("org.scalastyle" %% "scalastyle-sbt-plugin" % "0.8.0")
-
-    resolvers += "sonatype-releases" at "https://oss.sonatype.org/content/repositories/releases/"
 
 ### Usage
 

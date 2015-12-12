@@ -59,8 +59,6 @@ sbt is easy. You can add the jar as a normal library dependency into your `proje
     addSbtPlugin("org.scalastyle" %% "scalastyle-sbt-plugin" % "0.8.0")
     
     libraryDependencies += "org.ext" %% "nofoobarchecker" % "1.0.0"
-    
-    resolvers += "sonatype-releases" at "https://oss.sonatype.org/content/repositories/releases/"
 
 Or just copy the custom rules into your `project/lib` directory, and you should be good to go. Note that for sbt 0.13, you'll need to use the **2.10** version of scalastyle to compile your custom rules.
 
