@@ -144,7 +144,7 @@ No parameters
 ### Example configuration
 <pre>&lt;check enabled=&quot;true&quot; class=&quot;org.scalastyle.file.RegexChecker&quot; level=&quot;warning&quot;&gt;
  &lt;parameters&gt;
-  &lt;parameter name=&quot;regex&quot;&gt;(?m)^\s\*$(\r|)\n^\s*$(\r|)\n&lt;/parameter&gt;
+  &lt;parameter name=&quot;regex&quot;&gt;(?m)^\s*$(\r|)\n^\s*$(\r|)\n&lt;/parameter&gt;
  &lt;/parameters&gt;
  &lt;customMessage&gt;No double blank lines&lt;/customMessage&gt;
 &lt;/check&gt;</pre>
