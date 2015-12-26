@@ -1311,11 +1311,11 @@ Some projects may consider TODO or FIXME comments in a code bad style. They woul
 								</tr></table>
 
 ### Example configuration
-<pre>&lt;checker enabled=&quot;true&quot; class=&quot;org.scalastyle.scalariform.TodoCommentChecker&quot; level=&quot;warning&quot;&gt;
+<pre>&lt;check enabled=&quot;true&quot; class=&quot;org.scalastyle.scalariform.TodoCommentChecker&quot; level=&quot;warning&quot;&gt;
  &lt;parameters&gt;
   &lt;parameter default=&quot;TODO|FIXME&quot; type=&quot;string&quot; name=&quot;words&quot;/&gt;
  &lt;/parameters&gt;
-&lt;/checker&gt;</pre>
+&lt;/check&gt;</pre>
 <a name="org_scalastyle_scalariform_TokenChecker" />
 ### org.scalastyle.scalariform.TokenChecker - Checks that a regular expression cannot be matched in a token, if found reports this
 
