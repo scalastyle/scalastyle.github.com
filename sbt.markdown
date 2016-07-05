@@ -5,7 +5,7 @@ title: "Scalastyle - SBT plugin"
 
 ### Overview
 
-This project is intended to provide Scala 2.10 / SBT 0.13 plugin support for Scalastyle. The current version of the plugin is 0.8.0.
+This project is intended to provide Scala 2.10/2.11 & SBT 0.13 plugin support for Scalastyle. The current version of the plugin is 0.8.0.
 
 ### Repository
 
