@@ -64,6 +64,8 @@ an issue in github for scalastyle, which will notify the maintainers. The follow
 * The pull request is a single commit. This means that there will only be one log message for the change. This makes it a lot easier for everyone. See the section on squashing.
 * The code has the correct style. To check this, you can use Scalastyle :-). Seriously, use the scalastyle_config.xml to check your code.
 
+For pull requests, please follow the guidelines in [10 tips for better Pull Requests by Mark Seemann](http://blog.ploeh.dk/2015/01/15/10-tips-for-better-pull-requests/). If you do, they are a lot more likely to get accepted.
+
 ### What to work on
 
 Please see the set of [issues](https://github.com/scalastyle/scalastyle/issues) or the [Scalastyle WIKI](https://github.com/scalastyle/scalastyle/wiki) for a list of potential rules.

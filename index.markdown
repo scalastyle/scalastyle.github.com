@@ -6,7 +6,7 @@ title: "Scalastyle - Scala style checker"
 Scalastyle examines your Scala code and indicates potential problems with it. If you have come across Checkstyle for Java,
 then you'll have a good idea what scalastyle is. Except that it's for Scala obviously.
 
-Scalastyle was recently used as part of the grading framework for the course [Functional Programming Principles in Scala by Martin Odersky](https://www.coursera.org/course/progfun) on Coursera.
+Scalastyle is used as part of the grading framework for the course [Functional Programming Principles in Scala by Martin Odersky](https://www.coursera.org/course/progfun) on Coursera.
 
 ### How do I use scalastyle?
 
@@ -64,6 +64,10 @@ For the version 0.3.0 rules, see [0.3.0 Implemented Rules](rules-0.3.0.html).
 For the version 0.2.0 rules, see [0.2.0 Implemented Rules](rules-0.2.0.html).
 
 For the version 0.1.0 rules, see [0.1.0 Implemented Rules](rules-0.1.0.html).
+
+### Contrbuting
+
+If you wish to contribute to Scalastyle, please see the [Scalastyle Developer Guide](developer-guide.html)
 
 ### Questions and comments
 
