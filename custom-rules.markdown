@@ -26,7 +26,7 @@ So, for instance, if you had the following checker:
       }
     }
 
-Note that the `errorKey` val is `dont.use.foobar`. Make sure you compile this class with the correct version of Scala (2.10 or 2.11). To find the correct version, see the appropriate plugin (sbt, maven or command line). With this class, you need the following `reference.conf`:
+Note that the `errorKey` val is `dont.use.foobar`. Make sure you compile this class with the correct version of Scala (2.10/2.11/2.12). To find the correct version, see the appropriate plugin (sbt, maven or command line). With this class, you need the following `reference.conf`:
 
     dont.use.foobar.message = "Avoid using foobar"
     dont.use.foobar.label = "Foobar"
@@ -56,7 +56,7 @@ Once you have the jar, you'll have to modify your sbt plugin configuration, your
 
 sbt is easy. You can add the jar as a normal library dependency into your `project/plugins.sbt`:
 
-    addSbtPlugin("org.scalastyle" %% "scalastyle-sbt-plugin" % "0.8.0")
+    addSbtPlugin("org.scalastyle" %% "scalastyle-sbt-plugin" % "0.9.0")
     
     libraryDependencies += "org.ext" %% "nofoobarchecker" % "1.0.0"
 
@@ -69,7 +69,7 @@ Maven is also easy. You can add the jar as a normal dependency of the scalastyle
     <plugin>
       <groupId>org.scalastyle</groupId>
       <artifactId>scalastyle-maven-plugin</artifactId>
-      <version>0.8.0</version>
+      <version>0.9.0</version>
       <configuration>
         ...
       </configuration>
@@ -77,7 +77,7 @@ Maven is also easy. You can add the jar as a normal dependency of the scalastyle
        <dependency>
          <groupId>org.ext</groupId>
          <artifactId>nofoobarchecker</artifactId>
-         <version>1.0.0</version>
+         <version>0.9.0</version>
        </dependency>
       </dependencies>
       <executions>
@@ -85,12 +85,12 @@ Maven is also easy. You can add the jar as a normal dependency of the scalastyle
       </executions>
     </plugin>
 
-You will need to use the **2.11** version of scalastyle to compile your custom rules.
+For maven, you will need to use the **2.11** version of scalastyle to compile your custom rules.
 
 ### Command line
 
 The command line has an extra parameter `--externalJar` or `-e`
 
-    $ java -jar scalastyle-batch_2.10.jar --config lib/scalastyle_config.xml --externalJar nofoobarchecker.jar src/main/scala
+    $ java -jar scalastyle-batch_2.12.jar --config lib/scalastyle_config.xml --externalJar nofoobarchecker.jar src/main/scala
 
 You will need to use whatever version of scala that you specify on the command line to compile your custom rules.

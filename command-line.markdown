@@ -17,15 +17,19 @@ executable to be on your PATH
   need to download the appropriate scalastyle-batch.jar and update its path accordingly
 
     #!/bin/bash
-    java -jar path/to/scalastyle_2.10-0.8.0-batch.jar "$@"
+    java -jar path/to/scalastyle_2.12-0.9.0-batch.jar "$@"
 
 ### Running scalastyle from the command line (version 0.6.0 and later)
 
-Download [scalastyle-batch 2.10](https://oss.sonatype.org/content/repositories/releases/org/scalastyle/scalastyle_2.10/0.8.0/scalastyle_2.10-0.8.0-batch.jar) or [scalastyle-batch 2.11](https://oss.sonatype.org/content/repositories/releases/org/scalastyle/scalastyle_2.11/0.8.0/scalastyle_2.11-0.6.0-batch.jar).
+Download
+
+ * [scalastyle-batch 2.10](https://oss.sonatype.org/content/repositories/releases/org/scalastyle/scalastyle_2.10/0.9.0/scalastyle_2.10-0.9.0-batch.jar)
+ * [scalastyle-batch 2.11](https://oss.sonatype.org/content/repositories/releases/org/scalastyle/scalastyle_2.11/0.9.0/scalastyle_2.11-0.9.0-batch.jar)
+ * [scalastyle-batch 2.12](https://oss.sonatype.org/content/repositories/releases/org/scalastyle/scalastyle_2.12/0.9.0/scalastyle_2.12-0.9.0-batch.jar)
 
 Run the jar like:
 
-    $ java -jar scalastyle-batch_2.10.jar --config lib/scalastyle_config.xml src/main/scala
+    $ java -jar scalastyle-batch_2.12.jar --config lib/scalastyle_config.xml src/main/scala
 
 or similar. You'll need a [configuration](configuration.html).
 
