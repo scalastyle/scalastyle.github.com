@@ -18,32 +18,28 @@ New rules:
 Additions / bugfixes:
 
  * Supports scala 2.12
-
- * #260 - Not all interpolation types require variables
- * #199 and #255 FieldNamesChecker desctructuring and object fields
- * #253 Enforce ScalaDoc indentation
- * #224 ScalaDocChecker supports comments inheritance
- * #225 ScalaDocChecker takes into account valid constrained type parameter declarations
- * #217 Add a CyclomaticComplexityChecker option to ignore "case" keyword
-
+ * Fix: #260 - Not all interpolation types require variables
+ * Fix: #199 and #255 FieldNamesChecker desctructuring and object fields
+ * Fix: #253 Enforce ScalaDoc indentation
+ * Fix: #224 ScalaDocChecker supports comments inheritance
+ * Fix: #225 ScalaDocChecker takes into account valid constrained type parameter declarations
+ * Fix: #217 Add a CyclomaticComplexityChecker option to ignore "case" keyword
  * Add parameter ignoreComments to MethodLengthChecker
- * #204 NullChecker option to tolerate comparisons with null
-
- * #236 ImportsChecker: allow actual lexicographic sorting
- * #234 Add "exceptions" param for UnderscoreImportChecker
+ * Fix: #204 NullChecker option to tolerate comparisons with null
+ * Fix: #236 ImportsChecker: allow actual lexicographic sorting
+ * Fix: #234 Add "exceptions" param for UnderscoreImportChecker
  * Merge pull request #153 classParamIndentSize in indentation checker
  * BUGFIX Class and Object name check entire name
- * #201 ScalaDocChecker: Add ignoreTokenTypes option
- * #220 Add "ignoreRegex" param for UnderscoreImportChecker
- * #194    Fix indentation check for classes where invocation is mistaken for a parameter list
+ * Fix: #201 ScalaDocChecker: Add ignoreTokenTypes option
+ * Fix: #220 Add "ignoreRegex" param for UnderscoreImportChecker
+ * Fix: #194    Fix indentation check for classes where invocation is mistaken for a parameter list
  * option to ignore entire lines of whitespace for WhitespaceEndOfLineChecker
  * Improvements in error messages
 
 SBT:
 
- * #45 Fix scalastyleConfig in multi-project builds
- * #52 Upgrade to AutoPlugin
-
+ * Fix: #45 Fix scalastyleConfig in multi-project builds
+ * Fix: #52 Upgrade to AutoPlugin
  * Add a new "silent" parameter - suppress logging of results to the sbt log
 
 Version 0.8.0
