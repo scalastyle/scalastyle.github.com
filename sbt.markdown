@@ -91,17 +91,23 @@ You can also have your scalastyle checks automatically run as part of another ta
     // Create a default Scala style task to run with tests
     lazy val testScalastyle = taskKey[Unit]("testScalastyle")
 
+    // scalastyle >= 0.9.0
+    testScalastyle := scalastyle.in(Test).toTask("").value
+    // scalastyle <= 0.8.0
     testScalastyle := org.scalastyle.sbt.ScalastylePlugin.scalastyle.in(Test).toTask("").value
 
-    (test in Test) <<= (test in Test) dependsOn testScalastyle
+    (test in Test) := ((test in Test) dependsOn testScalastyle).value
 
 or as part of the compile task:
 
     lazy val compileScalastyle = taskKey[Unit]("compileScalastyle")
 
+    // scalastyle >= 0.9.0
+    compileScalastyle := scalastyle.in(Compile).toTask("").value
+    // scalastyle <= 0.8.0
     compileScalastyle := org.scalastyle.sbt.ScalastylePlugin.scalastyle.in(Compile).toTask("").value
 
-    (compile in Compile) <<= (compile in Compile) dependsOn compileScalastyle
+    (compile in Compile) := ((compile in Compile) dependsOn compileScalastyle).value
 
 But note that this makes the compile task dependent on the scalastyle task - the scalastyle task executes first. This can cause problems because if the code doesn't compile, you'll get the scalastyle errors messages, not the scalac ones. Great though scalastyle is, it can't match the error messages produced by the compiler. :-)
 
