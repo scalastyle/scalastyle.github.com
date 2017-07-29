@@ -90,7 +90,7 @@ Some version control systems don't cope well with files which don't end with a n
 No parameters
 
 ### Example configuration
-<pre>&lt;check enabled=&quot;true&quot; class=&quot;org.scalastyle.file.NewlineAtEofChecker&quot; level=&quot;warning&quot;/&gt;</pre>
+<pre>&lt;check enabled=&quot;true&quot; class=&quot;org.scalastyle.file.NewLineAtEofChecker&quot; level=&quot;warning&quot;/&gt;</pre>
 ### org.scalastyle.file.NoNewLineAtEofChecker - Checks that a file does not end with a newline character
 
  * id - no.newline.at.eof
