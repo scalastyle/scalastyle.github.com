@@ -256,7 +256,7 @@ Because Mirco Dotta wanted it.
 No parameters
 
 ### Example configuration
-<pre>&lt;check enabled=&quot;true&quot; class=&quot;org.scalastyle.file.NoNewlineAtEofChecker&quot; level=&quot;warning&quot;/&gt;</pre>
+<pre>&lt;check enabled=&quot;true&quot; class=&quot;org.scalastyle.file.NoNewLineAtEofChecker&quot; level=&quot;warning&quot;/&gt;</pre>
 <a name="org_scalastyle_file_RegexChecker" />
 
 ### org.scalastyle.file.RegexChecker - Checks that a regular expression cannot be matched, if found reports this
@@ -1526,7 +1526,7 @@ An expression with spaces around + can be easier to read
 No parameters
 
 ### Example configuration
-<pre>&lt;check enabled=&quot;true&quot; class=&quot;org.scalastyle.scalariform.BeforePlusChecker&quot; level=&quot;warning&quot;/&gt;</pre>
+<pre>&lt;check enabled=&quot;true&quot; class=&quot;org.scalastyle.scalariform.SpacesBeforePlusChecker&quot; level=&quot;warning&quot;/&gt;</pre>
 <a name="org_scalastyle_scalariform_StructuralTypeChecker" />
 
 ### org.scalastyle.scalariform.StructuralTypeChecker - Check that structural types are not used.
