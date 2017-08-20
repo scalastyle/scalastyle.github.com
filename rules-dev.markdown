@@ -1567,7 +1567,7 @@ Some projects may consider TODO or FIXME comments in a code bad style. They woul
 ### Example configuration
 <pre>&lt;check enabled=&quot;true&quot; class=&quot;org.scalastyle.scalariform.TodoCommentChecker&quot; level=&quot;warning&quot;&gt;
  &lt;parameters&gt;
-  &lt;parameter default=&quot;TODO|FIXME&quot; type=&quot;string&quot; name=&quot;words&quot;/&gt;
+  &lt;parameter name=&quot;words&quot;&gt;TODO|FIXME&lt;/parameter&gt;
  &lt;/parameters&gt;
 &lt;/check&gt;</pre>
 <a name="org_scalastyle_scalariform_TokenChecker" />
