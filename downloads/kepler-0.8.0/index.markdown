@@ -7,6 +7,7 @@ Choose one of the following:
 
 ### Luna 4.4 (and later)
 
+ * [Scalastyle 1.0.0](http://www.scalastyle.org/downloads/luna-1.0.0/site)
  * [Scalastyle 0.9.0](http://www.scalastyle.org/downloads/luna-0.9.0/site)
  * [Scalastyle 0.8.0](http://www.scalastyle.org/downloads/luna-0.8.0/site)
 

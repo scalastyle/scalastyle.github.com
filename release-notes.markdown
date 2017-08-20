@@ -3,6 +3,20 @@ layout: scalastyle
 title: "Scalastyle - Release notes"
 ---
 
+Version 1.0.0
+=============
+
+SBT:
+
+ # Support for sbt 1.0.0
+ * #65: Add a new "failOnWarning" parameter - fail if there are scalastyle warnings, not just on error
+ * Fix: #47 scalastyleSources does not include all unmanaged sources by default
+
+Additions / bugfixes:
+
+ * Fix: #265 Fixes for destructuring in FieldNamesChecker
+ * Fix: #266 ScalaDocChecker indentStyle & ignoreOverride documentation inaccurate
+
 Version 0.9.0
 =============
 

@@ -56,11 +56,11 @@ Once you have the jar, you'll have to modify your sbt plugin configuration, your
 
 sbt is easy. You can add the jar as a normal library dependency into your `project/plugins.sbt`:
 
-    addSbtPlugin("org.scalastyle" %% "scalastyle-sbt-plugin" % "0.9.0")
+    addSbtPlugin("org.scalastyle" %% "scalastyle-sbt-plugin" % "1.0.0")
     
     libraryDependencies += "org.ext" %% "nofoobarchecker" % "1.0.0"
 
-Or just copy the custom rules into your `project/lib` directory, and you should be good to go. Note that for sbt 0.13, you'll need to use the **2.10** version of scalastyle to compile your custom rules.
+Or just copy the custom rules into your `project/lib` directory, and you should be good to go. Note that for sbt 0.13, you'll need to use the **2.10** version of scalastyle to compile your custom rules. For sbt 1.0, you will need to use the **2.12** version of scalastyle to compile your custom rules.
 
 ### Maven
 
@@ -69,7 +69,7 @@ Maven is also easy. You can add the jar as a normal dependency of the scalastyle
     <plugin>
       <groupId>org.scalastyle</groupId>
       <artifactId>scalastyle-maven-plugin</artifactId>
-      <version>0.9.0</version>
+      <version>1.0.0</version>
       <configuration>
         ...
       </configuration>
@@ -77,7 +77,7 @@ Maven is also easy. You can add the jar as a normal dependency of the scalastyle
        <dependency>
          <groupId>org.ext</groupId>
          <artifactId>nofoobarchecker</artifactId>
-         <version>0.9.0</version>
+         <version>1.0.0</version>
        </dependency>
       </dependencies>
       <executions>
