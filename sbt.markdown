@@ -38,6 +38,7 @@ This produces a list of errors on the console, as well as an XML result file `ta
 |scalastyleConfigUrl         |Option\[URL\]|Scalastyle configuration URL. If this is Some(url), then this will be used in preference to the setting `scalastyleConfig`. It is downloaded and stored in the `target` directory, and refreshed every `scalastyleConfigRefreshHours` hours. Default value is `None`.
 |scalastyleConfigRefreshHours|Integer      |If scalastyleConfigUrl is set, refresh it after this number of hours. Default value is 24.
 |scalastyleFailOnError       |Boolean      |If true, the scalastyle task fails if any messages at error level are output. Default value is false.
+|scalastyleFailOnWarning     |Boolean      |If true, the scalastyle task fails if any messages at warning level are output. Default value is false.
 |scalastyleConfigUrlCacheFile|String       |When scalastyleConfigUrl is used, the name of the local file in which it is stored. Default is `target/scalastyle-config.xml`
 
 If the remote source for your `scalastyle-config.xml` file is secured and requires the passing of tokens in the header of the http request or ssh authentication then scalastyleConfigUrl will not suffice. A work around is to define your own update task and make scalastyle depend on it in your `build.sbt` or `Build.scala`.
