@@ -132,9 +132,9 @@ Lines that are too long can be hard to read and horizontal scrolling is annoying
 ### Example configuration
 <pre>&lt;check enabled=&quot;true&quot; class=&quot;org.scalastyle.file.FileLineLengthChecker&quot; level=&quot;warning&quot;&gt;
  &lt;parameters&gt;
-  &lt;parameter default=&quot;100&quot; type=&quot;integer&quot; name=&quot;maxLineLength&quot;/&gt;
-  &lt;parameter default=&quot;2&quot; type=&quot;integer&quot; name=&quot;tabSize&quot;/&gt;
-  &lt;parameter default=&quot;true&quot; type=&quot;boolean&quot; name=&quot;ignoreImports&quot;/&gt;
+  &lt;parameter name=&quot;maxLineLength&quot;&gt;100&lt;/parameter&gt;
+  &lt;parameter name=&quot;tabSize&quot;&gt;2&lt;/parameter&gt;
+  &lt;parameter name=&quot;ignoreImports&quot;&gt;true&lt;/parameter&gt;
  &lt;/parameters&gt;
 &lt;/check&gt;</pre>
 <a name="org_scalastyle_file_FileTabChecker" />
@@ -1416,6 +1416,7 @@ Scaladoc is generally considered a good thing. Within reason.
 
 #### Description
 Ignore tokens is a comma separated string that may include the following : PatDefOrDcl (variables), TmplDef (classes, traits), TypeDefOrDcl (type definitions), FunDefOrDcl (functions)
+ Supported indentation styles are "scaladoc" (for ScalaDoc-style comments, with two spaces before the asterisk), "javadoc" (for JavaDoc-style comments, with a single space before the asterisk) or "anydoc" to support any style (any number of spaces before the asterisk). For backwards compatibility, if left empty, "anydoc" will be assumed.
 
 #### Parameters
 <table width="80%"><tr><th>Parameter</th><th>Description</th><th>Type</th><th>Default Value</th></tr><tr><td>ignoreRegex</td>
@@ -1433,7 +1434,7 @@ Ignore tokens is a comma separated string that may include the following : PatDe
       </tr><tr><td>indentStyle</td>
         <td>Force indent style</td>
         <td>string</td>
-        <td></td>
+        <td>anydoc</td>
       </tr></table>
 
 ### Example configuration
@@ -1441,8 +1442,8 @@ Ignore tokens is a comma separated string that may include the following : PatDe
  &lt;parameters&gt;
   &lt;parameter name=&quot;ignoreRegex&quot;&gt;(.*Spec$)|(.*SpecIT$)&lt;/parameter&gt;
   &lt;parameter name=&quot;ignoreTokenTypes&quot;&gt;PatDefOrDcl,TypeDefOrDcl,FunDefOrDcl,TmplDef&lt;/parameter&gt;
-  &lt;parameter default=&quot;false&quot; type=&quot;boolean&quot; name=&quot;ignoreOverride&quot;/&gt;
-  &lt;parameter default=&quot;&quot; type=&quot;string&quot; name=&quot;indentStyle&quot;/&gt;
+  &lt;parameter name=&quot;ignoreOverride&quot;&gt;false&lt;/parameter&gt;
+  &lt;parameter name=&quot;indentStyle&quot;&gt;anydoc&lt;/parameter&gt;
  &lt;/parameters&gt;
 &lt;/check&gt;</pre>
 <a name="org_scalastyle_scalariform_SimplifyBooleanExpressionChecker" />
@@ -1567,7 +1568,7 @@ Some projects may consider TODO or FIXME comments in a code bad style. They woul
 ### Example configuration
 <pre>&lt;check enabled=&quot;true&quot; class=&quot;org.scalastyle.scalariform.TodoCommentChecker&quot; level=&quot;warning&quot;&gt;
  &lt;parameters&gt;
-  &lt;parameter name=&quot;words&quot;&gt;TODO|FIXME&lt;/parameter&gt;
+  &lt;parameter default=&quot;TODO|FIXME&quot; type=&quot;string&quot; name=&quot;words&quot;/&gt;
  &lt;/parameters&gt;
 &lt;/check&gt;</pre>
 <a name="org_scalastyle_scalariform_TokenChecker" />
