@@ -68,7 +68,7 @@ For the version 0.2.0 rules, see [0.2.0 Implemented Rules](rules-0.2.0.html).
 
 For the version 0.1.0 rules, see [0.1.0 Implemented Rules](rules-0.1.0.html).
 
-### Contrbuting
+### Contributing
 
 If you wish to contribute to Scalastyle, please see the [Scalastyle Developer Guide](developer-guide.html)
 
