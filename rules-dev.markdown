@@ -1091,7 +1091,18 @@ Scala allows unicode characters as operators and some editors misbehave when the
             To fix it, replace the (unicode operator)⇒ with =>.
 
 #### Parameters
-No parameters
+<table width="80%">
+  <tr><th>Parameter</th><th>Description</th><th>Type</th><th>Default Value</th></tr>
+  <tr>
+    <td>allowNonAsciiScriptsInStringLiterals</td>
+    <td>
+      Allow scripts other than ASCII
+      (as defined by the regex `[\p{Alnum}\p{Punct}\p{Sc}\p{Space}]`) in string literals
+    </td>
+    <td>boolean</td>
+    <td>false</td>
+  </tr>
+</table>
 
 ### Example configuration
 <pre>&lt;check enabled=&quot;true&quot; class=&quot;org.scalastyle.scalariform.NonASCIICharacterChecker&quot; level=&quot;warning&quot;/&gt;</pre>

@@ -3,6 +3,13 @@ layout: scalastyle
 title: "Scalastyle - Release notes"
 ---
 
+Version 1.1.0
+=============
+
+Additions / bugfixes:
+
+ * Fix: #283 Add a NonASCIICharacterChecker option to allow international characters in string literals
+
 Version 1.0.0
 =============
 
