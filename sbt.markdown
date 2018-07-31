@@ -37,7 +37,7 @@ This produces a list of errors on the console, as well as an XML result file `ta
 |scalastyleConfig            |File         |Scalastyle configuration. Default value is `scalastyle-config.xml`
 |scalastyleConfigUrl         |Option\[URL\]|Scalastyle configuration URL. If this is Some(url), then this will be used in preference to the setting `scalastyleConfig`. It is downloaded and stored in the `target` directory, and refreshed every `scalastyleConfigRefreshHours` hours. Default value is `None`.
 |scalastyleConfigRefreshHours|Integer      |If scalastyleConfigUrl is set, refresh it after this number of hours. Default value is 24.
-|scalastyleFailOnError       |Boolean      |If true, the scalastyle task fails if any messages at error level are output. Default value is false.
+|scalastyleFailOnError       |Boolean      |If true, the scalastyle task fails if any messages at error level are output. Default value is true.
 |scalastyleFailOnWarning     |Boolean      |If true, the scalastyle task fails if any messages at warning level are output. Default value is false.
 |scalastyleConfigUrlCacheFile|String       |When scalastyleConfigUrl is used, the name of the local file in which it is stored. Default is `target/scalastyle-config.xml`
 
