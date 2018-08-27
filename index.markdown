@@ -21,6 +21,7 @@ There are several ways of using it:
  * [Gradle Plugin](https://github.com/ngbinh/gradle-scalastyle-plugin)
  * Intellij - You can enable scalastyle in Intellij by selecting Settings->Editor->Inspections, then searching for Scala style inspections.
  * [Codacy](https://www.codacy.com/) - You get out-of-the-box analysis on your git repositories.
+ * [CodeFactor](https://www.codefactor.io) - You get out-of-the-box analysis on your git repositories.
  * [Git pre-commit hook](git-pre-commit-hook.html)
 
 And you'll need a [configuration](configuration.html). If you have your own custom rules, then see [custom rules](custom-rules.html)
