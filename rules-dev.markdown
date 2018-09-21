@@ -1072,8 +1072,8 @@ No parameters
  * default level - WarningLevel
 
 #### Justification
-Scala allows unicode characters as operators and some editors misbehave when they see non-ascii character.
-            In a project collaborated by a community of developers. This check can be helpful in such situations.
+Scala allows unicode characters as operators and some editors misbehave when they see a non-ascii character.
+            In a project collaborated on by a community of developers this check can be helpful.
 
 
             "value".match {
