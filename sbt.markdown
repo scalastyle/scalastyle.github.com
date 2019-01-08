@@ -87,17 +87,24 @@ This has exactly the same output as the scalastyle command, except that the gene
 
 ### Running scalastyle as part of another task
 
-You can also have your scalastyle checks automatically run as part of another task:
+You can also have your scalastyle checks automatically run as part of another task.
 
-    // Create a default Scala style task to run with tests
+For example, you can run scalastyle on both the main and test sources during testing, that is, running `sbt test` will also run both the `compile:scalastyle` and `test:scalastyle` tasks:
+
+    // Create default Scala style tasks to run with tests
     lazy val testScalastyle = taskKey[Unit]("testScalastyle")
+    lazy val compileScalastyle = taskKey[Unit]("compileScalastyle")
 
     // scalastyle >= 0.9.0
     testScalastyle := scalastyle.in(Test).toTask("").value
+    compileScalastyle := scalastyle.in(Compile).toTask("").value
     // scalastyle <= 0.8.0
     testScalastyle := org.scalastyle.sbt.ScalastylePlugin.scalastyle.in(Test).toTask("").value
+    compileScalastyle := org.scalastyle.sbt.ScalastylePlugin.scalastyle.in(Compile).toTask("").value
 
     (test in Test) := ((test in Test) dependsOn testScalastyle).value
+    (test in Test) := ((test in Test) dependsOn compileScalastyle).value
+
 
 or as part of the compile task:
 
