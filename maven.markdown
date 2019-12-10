@@ -32,6 +32,7 @@ Default phase of execution is `verify`. The following is an example of a configu
               &lt;sourceDirectory&gt;${project.basedir}/src/main/scala&lt;/sourceDirectory&gt;
               &lt;testSourceDirectory&gt;${project.basedir}/src/test/scala&lt;/testSourceDirectory&gt;
               &lt;configLocation&gt;${project.basedir}/lib/scalastyle_config.xml&lt;/configLocation&gt;
+              &lt;testConfigLocation&gt;${project.basedir}/lib/scalastyle_test_config.xml&lt;/testConfigLocation&gt; 
               &lt;outputFile&gt;${project.basedir}/scalastyle-output.xml&lt;/outputFile&gt;
               &lt;outputEncoding&gt;UTF-8&lt;/outputEncoding&gt;
             &lt;/configuration&gt;
@@ -58,3 +59,9 @@ You can also specify multiple source directories if necessary. Replace the &lt;s
 </pre>
 
 and similarly for &lt;testSourceDirectory&gt; & &lt;testSourceDirectories&gt;.
+
+A test source directory can have a separate more liberal scalastyle configuration file, as follows:
+
+<pre>
+      &lt;testConfigLocation&gt;${project.basedir}/lib/scalastyle_test_config.xml&lt;/testConfigLocation&gt; 
+</pre>
