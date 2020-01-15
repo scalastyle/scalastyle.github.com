@@ -13,8 +13,9 @@ executable to be on your PATH
     $ brew install scalastyle
 
 **Linux** - Save the following script as `scalastyle`, place it on your PATH,
-  then make it executable via `chmod +x path/to/scalastyle`.  Note that you will
-  need to download the appropriate scalastyle-batch.jar and update its path accordingly
+then make it executable via `chmod +x path/to/scalastyle`. Note that you will
+need to download the appropriate scalastyle-batch.jar and update its path
+accordingly
 
     #!/bin/bash
     java -jar path/to/scalastyle_2.12-1.0.0-batch.jar "$@"
@@ -23,9 +24,9 @@ executable to be on your PATH
 
 Download
 
- * [scalastyle-batch 2.10](https://oss.sonatype.org/content/repositories/releases/org/scalastyle/scalastyle_2.10/1.0.0/scalastyle_2.10-1.0.0-batch.jar)
- * [scalastyle-batch 2.11](https://oss.sonatype.org/content/repositories/releases/org/scalastyle/scalastyle_2.11/1.0.0/scalastyle_2.11-1.0.0-batch.jar)
- * [scalastyle-batch 2.12](https://oss.sonatype.org/content/repositories/releases/org/scalastyle/scalastyle_2.12/1.0.0/scalastyle_2.12-1.0.0-batch.jar)
+- [scalastyle-batch 2.10](https://oss.sonatype.org/content/repositories/releases/com/beautiful-scala/scalastyle_2.10/1.0.0/scalastyle_2.10-1.0.0-batch.jar)
+- [scalastyle-batch 2.11](https://oss.sonatype.org/content/repositories/releases/com/beautiful-scala/scalastyle_2.11/1.0.0/scalastyle_2.11-1.0.0-batch.jar)
+- [scalastyle-batch 2.12](https://oss.sonatype.org/content/repositories/releases/com/beautiful-scala/scalastyle_2.12/1.0.0/scalastyle_2.12-1.0.0-batch.jar)
 
 Run the jar like:
 
@@ -35,9 +36,11 @@ or similar. You'll need a [configuration](configuration.html).
 
 ### Running scalastyle from the command line (pre-0.6.0)
 
-Download [scalastyle-batch](https://oss.sonatype.org/content/repositories/releases/org/scalastyle/scalastyle-batch_2.10/0.5.0/scalastyle-batch_2.10-0.5.0-distribution.zip).
+Download
+[scalastyle-batch](https://oss.sonatype.org/content/repositories/releases/com/beautiful-scala/scalastyle-batch_2.10/0.5.0/scalastyle-batch_2.10-0.5.0-distribution.zip).
 
-This zip contains an executable jar along with the dependencies in lib/. Unzip this file somewhere, and run the jar like:
+This zip contains an executable jar along with the dependencies in lib/. Unzip
+this file somewhere, and run the jar like:
 
     $ java -jar scalastyle-batch_2.10.jar --config lib/scalastyle_config.xml src/main/scala
 
