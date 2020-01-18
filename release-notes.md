@@ -3,6 +3,66 @@ layout: scalastyle
 title: "Scalastyle - Release notes"
 ---
 
+# Version 1.1.0
+
+New features
+
+- Cross compile for 2.13.
+  ([#353](https://github.com/scalastyle/scalastyle/pull/353) -
+  [@cddude229](https://github.comcddude229))
+- Add CaseBraceChecker rule - braces aren't required in `case` clauses.
+  ([#305](https://github.com/scalastyle/scalastyle/pull/305) -
+  [@evis](https://github.comevis))
+- Add WhileBraceChecker rule - it's recommended to never omit braces when using
+  `while`. ([#306](https://github.com/scalastyle/scalastyle/pull/306) -
+  [@evis](https://github.comevis))
+- Add ForLoopChecker rule - omit braces if you have a `yield` clause, otherwise,
+  surround the contents with curly-braces, even if the contents are only a
+  single line. ([#303](https://github.com/scalastyle/scalastyle/pull/303) -
+  [@Darhazer](https://github.comDarhazer))
+
+Fixes and improvements
+
+- Upgrade scalariform to 0.2.10, which brings the following changes:
+  - Add support for multiline param groups.
+  - Add support for inline single case statements.
+  - Add trailing comma support and support for Scala 2.13.
+- Allow the MethodLengthChecker to ignore empty lines.
+  ([#301](https://github.com/scalastyle/scalastyle/pull/301) -
+  [@canoztokmak](https://github.comcanoztokmak))
+- Enhance RedundantIfChecker to raise violations also when the true/false
+  statements are in braces.
+  ([#296](https://github.com/scalastyle/scalastyle/pull/296) -
+  [@mccartney](https://github.commccartney))
+- Fix ProcedureDeclarationChecker rule name in the config.
+  ([#299](https://github.com/scalastyle/scalastyle/pull/299) -
+  [@BalmungSan](https://github.comBalmungSan))
+- Fix ScalaDocChecker warnings if implicit def found first in an object.
+  ([#285](https://github.com/scalastyle/scalastyle/pull/285) -
+  [@tanishiking](https://github.comtanishiking))
+- Make MagicNumberChecker's ignore param tolerate spaces.
+  ([#289](https://github.com/scalastyle/scalastyle/pull/289) -
+  [@lonlylocly](https://github.comlonlylocly))
+- Add singleLineAllowed option to ForBraceChecker.
+  ([#287](https://github.com/scalastyle/scalastyle/pull/287) -
+  [@marconilanna](https://github.commarconilanna))
+- Include regex parameter to HeaderMatchesChecker.
+  ([#288](https://github.com/scalastyle/scalastyle/pull/288) -
+  [@Kuroshii](https://github.comKuroshii))
+- Add an option to NonASCIICharacterChecker to allow international characters in
+  string literals. ([#284](https://github.com/scalastyle/scalastyle/pull/284) -
+  [@marconilanna](https://github.commarconilanna))
+- Fix NonASCIICharacterChecker to inspect the raw text.
+  ([#274](https://github.com/scalastyle/scalastyle/pull/274) -
+  [@latkin](https://github.comlatkin))
+- Add scala.Any and Object to the list of "object" types.
+  ([#282](https://github.com/scalastyle/scalastyle/pull/282) -
+  [@nrinaudo](https://github.comnrinaudo))
+- Fix #279 NullPointerException when trying to create intermediate directories
+  for output.
+  ([bb0218e](https://github.com/scalastyle/scalastyle/commit/bb0218e) -
+  [@matthewfarwell](https://github.commatthewfarwell))
+
 # Version 1.0.0
 
 SBT:

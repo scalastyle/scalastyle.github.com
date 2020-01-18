@@ -3,45 +3,52 @@ layout: scalastyle
 title: "Scalastyle - Command line"
 ---
 
-### Running scalastyle as an executable
+### Running Scalastyle using Coursier
 
-Some tools (like [overcommit](git-pre-commit-hook.html) require a `scalastyle`
-executable to be on your PATH
+#### Install Coursier
 
-**Mac OS X** - [Homebrew](http://brew.sh/) makes it easy to install scalastyle
+**Mac OS X** - using [Homebrew](http://brew.sh)
 
-    $ brew install scalastyle
+```bash
+brew tap coursier/formulas
+brew install coursier/formulas/coursier
+```
 
-**Linux** - Save the following script as `scalastyle`, place it on your PATH,
-then make it executable via `chmod +x path/to/scalastyle`. Note that you will
-need to download the appropriate scalastyle-batch.jar and update its path
-accordingly
+**Linux**
 
-    #!/bin/bash
-    java -jar path/to/scalastyle_2.12-1.0.0-batch.jar "$@"
+```bash
+curl -Lo coursier https://git.io/coursier-cli
+chmod +x coursier
+```
 
-### Running scalastyle from the command line (version 0.6.0 and later)
+**Windows**
+
+```
+bitsadmin /transfer downloadCoursierCli https://git.io/coursier-cli "%cd%\coursier"
+bitsadmin /transfer downloadCoursierBat https://git.io/coursier-bat "%cd%\coursier.bat"
+```
+
+More details on Coursier's [website](https://get-coursier.io/docs/cli-overview).
+
+#### Execute Scalastyle:
+
+```bash
+coursier launch com.beautiful-scala:scalastyle_2.13:1.1.0 \
+    -M org.scalastyle.Main -- \
+    -c scalastyle_config.xml \
+    src/main/scala
+```
+
+### Running Scalastyle from the command line
 
 Download
 
-- [scalastyle-batch 2.10](https://oss.sonatype.org/content/repositories/releases/com/beautiful-scala/scalastyle_2.10/1.0.0/scalastyle_2.10-1.0.0-batch.jar)
-- [scalastyle-batch 2.11](https://oss.sonatype.org/content/repositories/releases/com/beautiful-scala/scalastyle_2.11/1.0.0/scalastyle_2.11-1.0.0-batch.jar)
-- [scalastyle-batch 2.12](https://oss.sonatype.org/content/repositories/releases/com/beautiful-scala/scalastyle_2.12/1.0.0/scalastyle_2.12-1.0.0-batch.jar)
+- [scalastyle_2.13-1.1.0-assembly.jar](https://repo1.maven.org/maven2/com/beautiful-scala/scalastyle_2.13/1.1.0/scalastyle_2.13-1.1.0-assembly.jar)
+- [scalastyle_2.12-1.1.0-assembly.jar](https://repo1.maven.org/maven2/com/beautiful-scala/scalastyle_2.12/1.1.0/scalastyle_2.12-1.1.0-assembly.jar)
+- [scalastyle_2.11-1.1.0-assembly.jar](https://repo1.maven.org/maven2/com/beautiful-scala/scalastyle_2.11/1.1.0/scalastyle_2.11-1.1.0-assembly.jar)
 
-Run the jar like:
+Execute the jar like:
 
-    $ java -jar scalastyle-batch_2.12.jar --config lib/scalastyle_config.xml src/main/scala
+    $ java -jar scalastyle_2.13-1.1.0-assembly.jar -c scalastyle_config.xml src/main/scala
 
-or similar. You'll need a [configuration](configuration.html).
-
-### Running scalastyle from the command line (pre-0.6.0)
-
-Download
-[scalastyle-batch](https://oss.sonatype.org/content/repositories/releases/com/beautiful-scala/scalastyle-batch_2.10/0.5.0/scalastyle-batch_2.10-0.5.0-distribution.zip).
-
-This zip contains an executable jar along with the dependencies in lib/. Unzip
-this file somewhere, and run the jar like:
-
-    $ java -jar scalastyle-batch_2.10.jar --config lib/scalastyle_config.xml src/main/scala
-
-or similar. You'll need a [configuration](configuration.html).
+You'll need a [configuration](configuration.html).

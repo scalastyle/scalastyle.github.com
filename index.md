@@ -41,7 +41,7 @@ To download Scalastyle, the jar is available from Sonatype:
 [2.11](https://oss.sonatype.org/content/repositories/releases/com/beautiful-scala/scalastyle_2.11).  
 For the SBT plugin, see [Scalastyle SBT Plugin](sbt.html).  
 The latest development snapshots are available from
-[Sonatype snapshots](https://oss.sonatype.org/content/repositories/snapshots/com/beautiful-scala).
+[Sonatype snapshots](https://oss.sonatype.org/content/repositories/snapshots/com/beautiful-scala/).
 
 ### Rules
 
