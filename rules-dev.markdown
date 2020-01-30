@@ -870,6 +870,10 @@ Long methods can be hard to read and understand.
         <td>Ignore comments</td>
         <td>boolean</td>
         <td>false</td>
+      </tr><tr><td>ignoreEmpty</td>
+        <td>Ignore empty lines</td>
+        <td>boolean</td>
+        <td>false</td>
       </tr></table>
 
 ### Example configuration
@@ -877,6 +881,7 @@ Long methods can be hard to read and understand.
  &lt;parameters&gt;
   &lt;parameter name=&quot;maxLength&quot;&gt;50&lt;/parameter&gt;
   &lt;parameter name=&quot;ignoreComments&quot;&gt;false&lt;/parameter&gt;
+  &lt;parameter name=&quot;ignoreEmpty&quot;&gt;false&lt;/parameter&gt;
  &lt;/parameters&gt;
 &lt;/check&gt;</pre>
 <a name="org_scalastyle_scalariform_MethodNamesChecker" />
